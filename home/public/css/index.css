@@ -1,0 +1,191 @@
+@CHARSET "UTF-8";
+*{
+	font-family: "微软雅黑";
+}
+body{
+	overflow-x: hidden;
+	margin: 0 auto;
+}
+a{text-decoration: none;}
+.h600{height: 600px;}
+.h18{height: 18px;}
+.f34{font-size: 34px;}
+.c0094e1{color: #0094e1;}
+.cccc{color: #ccc;}
+.caaa{color: #aaa;}
+.c999{color: #999;}
+.c848484{color: #848484;}
+.cf0f0f0{color: #f0f0f0;}
+.cc5e1ef{color:#c5e1ef}
+.f24{font-size: 24px;}
+.mt44{margin-top: 44px;}
+.width1200{
+	width:1200px;
+	margin:0 auto;
+}
+.width93{
+	width: 93px;
+}
+
+/*viewmore*/
+.viewmore{width: 152px;height: 40px;margin:55px auto 0px;cursor: pointer;}
+
+
+
+
+
+
+/*轮播*/
+.banner{width: 100%;height: 550px;margin-top: 0px;position: absolute;overflow: hidden;}
+.banner ul.img{width: 10000px;hieght:550px;}
+.banner ul.img{position: absolute; left:-300px; top:-50px;}
+.banner ul.img li{float: left;}
+.banner ul.img li img {left:-300px;}
+
+.banner ul.num{width:100%;position: absolute;bottom: 20px;text-align: center;font-size: 0px;cursor: pointer;}
+.banner ul.num li{width:10px;height:10px;background-color:#ccc;border-radius:10px;display: inline-block;margin: 0 10px;}
+.banner ul.num li.on{background-color: #0094E1;}
+/*基地介绍*/
+.jidijieshao .jieshao-logo-cn{position: relative;margin-top: 15px;margin-bottom: 25px;}
+.jidijieshao .jieshao-logo-cn .hr{width: 554px;height:1px;background-color: #ccc;}
+.jidijieshao .jieshao-logo-cn .label{width: 129px;height: 30px;line-height: 30px;border:1px solid #ccc;border-radius: 30px;position: absolute;left: 50%;margin-left:-69px;top:-16px;background-color: #fff;}
+.detail .content{width: 718px;}
+/*小轮播1*/
+.banner-1{margin-top: 25px}
+.banner-1 .circle ul{font-size: 0px;text-align: center;margin-bottom: 41px}
+.banner-1 .circle li{width: 7px;height: 7px;background-color: #ccc;border-radius: 7px;display: inline-block;margin:0 7px;}
+.banner-1 .circle li:hover{background-color: #0094E1;cursor: pointer;}
+.banner-1 .content{margin-bottom:94px;}
+/*基地项目*/
+.jidixiangmu{background-color: #f0f0f0;padding-top: 50px;padding-bottom: 55px;}
+.jidixiangmu .jieshao-logo-cn{position: relative;margin-top: 15px;margin-bottom: 25px;}
+.jidixiangmu .jieshao-logo-cn .hr{width: 554px;height:1px;background-color: #ccc;}
+.jidixiangmu .jieshao-logo-cn .label{width: 129px;height: 30px;line-height: 30px;border:1px solid #ccc;border-radius: 30px;position: absolute;left: 50%;margin-left:-69px;top:-16px;background-color: #fff;}
+.jidixiangmu ul.number{font-size: 0px;text-align: center;margin-top:20px;margin-bottom: 20px;}
+.jidixiangmu ul.number li{width:24px;height: 4px;display: inline-block;background-color: #c5e1ef;margin: 0 6.5px;}
+.jidixiangmu ul.number li.on{background-color: #0094E1;}
+.jidixiangmu ul.number li:hover{background-color: #0094E1;cursor: pointer;}
+.jidixiangmu .img{margin: 0 auto;}
+
+/*基地项目-图片*/
+.jidixiangmu .img ul{width: 1300px;}
+.jidixiangmu .img li{width:377px;height: 313px;float: left;margin-right:35px;}
+.jidixiangmu .img li .info{margin-top: 20px;opacity: 1;}
+.jidixiangmu .img li .title{margin-bottom: 10px;}
+.jidixiangmu .img li .content .d1{margin-right: 20px;}
+/*基地项目-蒙版特效*/
+.jidixiangmu  li.jidixiangmu-li{position: relative;}
+.jidixiangmu .img .mengban{width:377px;height: 320px;background-color: rgba(0,0,0,0.85);position: absolute;top:0;left: 0;opacity:0 ;}
+.jidixiangmu .mengban-info{position: absolute;width:325px;top: 38px;left: 30px; opacity:0 ;}
+.jidixiangmu .mengban-info .mengban-title{color: #0094E1;}
+.jidixiangmu .mengban-info .top{margin-top: 20px;line-height: 27px;}
+.jidixiangmu .mengban-info .top .span1{margin-right: 40px;}
+.jidixiangmu .mengban-info .hr{height:1px;background-color:#aaa;margin:10px 0 15px}
+.jidixiangmu .mengban-info .bottom{line-height: 27px;}
+.jidixiangmu .btn{position:absolute;left:50%;margin-left:-97.5px;bottom:30px;width:195px;border:2px solid #0094e1;height: 40px;border-radius: 40px;margin-top: 14px;line-height: 38px;color: #0094e1;font-weight:bold;cursor:pointer;opacity:0;}
+.jidixiangmu li:hover .mengban,.jidixiangmu li:hover .mengban-info,.jidixiangmu li:hover .btn{opacity: 1;}
+.jidixiangmu li:hover .info{opacity: 0;}
+/*基地项目-轮播特效*/
+.jidixiangmu .img{width:1200px;height:620px;position: relative;overflow: hidden;}
+.jidixiangmu-out{width: 10000px;position: absolute;left:0;top:0}
+.jidixiangmu-out ul{float: left;}
+/*新闻*/
+.new{padding-top: 50px;padding-bottom: 55px;}
+.new .jieshao-logo-cn{position: relative;margin-top: 15px;margin-bottom: 25px;}
+.new .jieshao-logo-cn .hr{width: 554px;height:1px;background-color: #ccc;}
+.new .jieshao-logo-cn .label-group{position: absolute;left: 50%;margin-left:-138px;top:-16px;}
+.new .jieshao-logo-cn .label{width: 190px;height: 30px;line-height: 30px;border:1px solid #ccc;border-radius: 30px;background-color: #fff;float: left;margin-left:50px;margin-right: 20px;cursor: pointer;}
+.new .jieshao-logo-cn .label.on{border-color:#0094e1;color: #0094e1;}
+.new ul.number{font-size: 0px;text-align: center;margin-top:20px;margin-bottom: 20px;}
+.new ul.number li{width:24px;height: 4px;display: inline-block;background-color: #c5e1ef;margin: 0 6.5px;}
+.new ul.number li:hover{background-color: #0094E1;cursor: pointer;}
+/*新闻-星星*/
+.new .star{width: 1106px;}
+.new .real-star{height: 36px;margin: 0 27px;}
+.new .star .hr1{width:508px;height: 17px;border-bottom: 1px solid #ccc;}
+.new .star .hr2{width:508px;height: 17px;border-bottom: 1px solid #ccc;}
+.new .content{width: 1035px;margin-top: 29px;}
+.new .content ul.new-content{width:1300px}
+/*新闻--内容*/
+.new ul.new-content li{width: 45%;float:right; margin-right:auto; margin-bottom: 34px;}
+.new ul.new-content .cal{width: 77px;height: 84px;background-color: #e5e5e5;margin-right: 10px;cursor: default;}
+.new ul.new-content .cal:hover{color: #fff;background-color: #0094E1;font-weight: bold;}
+.new ul.new-content .cal .cal-big{position: relative;top:11px}
+.new ul.new-content .cal .cal-small{position: relative;top:11px}
+.new ul.new-content .info{width: 390px;height:79px;margin-top: 5px;}
+.new ul.new-content .info .title{margin-bottom: 5px;}
+.new ul.new-content .img{margin-left: 87px;cursor: pointer;}
+/*新闻--轮播*/
+.new .content{width:1035px;height:350px;position: relative;overflow: hidden;}
+.new .content .new-out{width:10000px;position: absolute;left:0px;top:0}
+.new ul.new-content{float: left;}
+
+/*成员*/
+.members{background-color: #ebebeb;padding-top: 50px;padding-bottom: 55px; min-width:10000px;}
+.members .jieshao-logo-cn{position: relative;margin-top: 15px;margin-bottom: 25px;}
+.members .jieshao-logo-cn .hr{width: 554px;height:1px;background-color: #ccc;}
+.members .jieshao-logo-cn .label-group{position: absolute;left: 50%;margin-left:-138px;top:-16px;}
+.members .jieshao-logo-cn .label{width: 129px;height: 30px;line-height: 30px;border:1px solid #ccc;border-radius: 30px;background-color: #fff;float: left;margin-right: 20px;cursor: pointer;}
+.members .jieshao-logo-cn .label.on{border-color:#0094e1;color: #0094e1;}
+.members ul.number{font-size: 0px;text-align: center;margin-top:50px;margin-bottom: 20px;}
+.members ul.number li{width:24px;height: 4px;display: inline-block;background-color: #c5e1ef;margin: 0 6.5px;}
+.members ul.number li:hover{background-color: #0094E1;cursor: pointer;}
+.members .content ul.member-content{width: 1300px;}
+.members .content li{width:226px;float:left;margin-right:18px;height:400px;}
+.members .content .img{width: 226px;height: 290px;}/*width: 226px;height: 290px;*/
+.members .content .img img{width: 100%;height: 100%;}
+.members .content li .info2{margin-top: 23px;line-height: 27px;}
+.members .content li .info2 .title{opacity: 1;transition: opacity 0.4s linear;}
+/*成员-特效*/
+.members .content ul.member-content .d1{position: relative;cursor: pointer;margin-bottom:30px;}
+.members .content ul.member-content .d2{width: 226px;height: 290px;position: absolute;top:0px;left: 0px;background-color: rgba(0,0,0,0.7);opacity: 0;transition: opacity 0.4s linear;}
+.members .content ul.member-content .info{width: 195px;height: 212px;text-align: center;font-size: 14px;position: absolute;top:34px;left:14px;color: #9b9b9b;opacity: 0;transition: opacity 0.4s linear;}
+.members .content ul.member-content .hr{height: 2px;background-color: #9b9b9b;margin-top: 14px;margin-bottom:20px;}
+.members .content ul.member-content .name{font-size: 18px;color: #0094e1;margin-bottom: 15px;font-weight: bold;}
+.content ul.number-content .detail{text-align: left;}
+.members .content ul.member-content .but{border:2px solid #0094e1;height: 40px;border-radius: 40px;margin-top: 14px;line-height: 38px;color: #0094e1;font-weight: bold;}
+.members .content ul.member-content .touxiang-out{width: 80px;height: 80px;background-color: #fff;border-radius: 80px;position: absolute;left: 69px;bottom:160px;opacity: 0;/*transition:opacity 1s;*/transition: bottom  0.3s linear,opacity 0.3s linear;}
+.members .content ul.member-content .touxiang-int{display: block;width: 73px;height: 73px;border-radius: 73px;overflow: hidden;position: absolute;top:50%;left: 50%;margin-top: -36.5px;margin-left:-36.5px;/*transition: opacity 1s bottom 2s;*/}
+.members .content ul.member-content .touxiang-int img{width:100%;height:100%;}
+.members .content ul.member-content .d1:hover .touxiang-out{bottom:70px;opacity: 1;}
+.members .content ul.member-content .d1:hover .d2{opacity: 1;}
+.members .content ul.member-content .d1:hover .info{opacity: 1;}
+.members .content ul.member-content .d1:hover .info2 .title{opacity: 0;}
+/*成员轮播*/
+.members .content{width:1200px;height:830px;position: relative;overflow: hidden;}
+.members .content .member-out{width:10000px;position: absolute;left:0px;top:0}
+.members ul.member-content{float: left;}
+
+/*表单*/
+.biaodan{background-color: #f2f2f2;padding-top: 50px;padding-bottom: 55px; min-width:1120px;}
+.biaodan .content{width: 1120px;height: 340px;}
+.biaodan .content .left{width: 754px;height:340px;}
+.biaodan .content .left .title{width:160px;height: 45px;background: url('{$Think.const.IMG_URL}/icon_shutiao.png') no-repeat 0 5px;padding-left: 20px;margin-bottom: 48px;line-height: 33px;}
+.biaodan .content .left .real-form{height: 242px;}
+.biaodan .content .left .real-form ul{width:800px}
+.biaodan .content .left .real-form li{width: 230px;height: 45px;background-color: #fff;float:left;margin-right:30px;margin-bottom: 20px;}
+.biaodan .content .left .real-form li input[type="text"]{width:100%;height: 100%;border: 0px;padding-left: 20px;
+box-sizing: border-box;font-size: 15px;}
+.biaodan .content .left .real-form textarea{width: 490px;height: 110px;padding: 15px;box-sizing: border-box;resize:none;float:left;margin-right:30px;font-size: 15px;border: 0;}
+.biaodan .content .left .real-form .last{float: left;font-size: 15px;position:relative;}
+.biaodan .content .left .real-form .last .last-top{width:230px;height:45px;}
+.biaodan .content .left .real-form .last .last-top select{width: 100%;height: 100%;padding-left:20px ;box-sizing: border-box;color: #a9a9a9;border: 0;}
+.file{position:absolute;margin-left:-38px; filter:alpha(opacity:0);opacity: 0;width:38px;height:25px; }
+.biaodan .content .left .real-form .last .last-btn{width: 230px;height: 45px;background-color: #0094E1;line-height: 45px;color: #fff;margin-top: 15px;cursor: pointer;}
+.biaodan .content .right .title{height: 45px;background: url('../img/icon_shutiao.png') no-repeat 0 5px;padding-left: 20px;margin-bottom: 48px;}
+.biaodan .content .right{width:282px;height:340px;}
+.biaodan .content .right .touch-us{line-height: 29px;}
+.biaodan .content .right .touch-us .touch-us-content{padding-left: 20px;box-sizing: border-box;}
+.biaodan .content .right .touch-us .touch-us-content.content1{background: url({$Think.const.IMG_URL}/icon_dizhi.png) no-repeat 0 8px;}
+.biaodan .content .right .touch-us .touch-us-content.content2{background: url({$Think.const.IMG_URL}/icon_tel.png) no-repeat 0 8px;}
+/*footer*/
+/*结尾开始*/
+.jiewei{width: 1200px;height:300px;margin:0 auto;}
+.jiewei .erweizi{width:200px;height:37px;margin: 0 auto;}
+.jiewei .zuihou{width: 850px;margin: 25px auto;}
+.jiewei .nav{width: 850px;margin:0 auto;}
+
+.jiewei  ul li .hover{display: none;}
+.jiewei  ul li:hover .normal{display:none;}
+.jiewei  ul li:hover .hover{display: block;}
+/*结尾结束*/

@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h3>修改成员</h3>
+<form action="/expment/admin.php/Home/Member/modifymemberhandle" method="post" enctype="multipart/form-data">
+<table width="70%" border="1" cellpadding="5" cellspacing="0" bgcolor="#cccccc" >
+<input type="hidden" name="mem_id" value="{$mes[0][mem_id]}"/>
+	<tr>
+		<td align="right">姓名</td>
+		<td><input type="text"  name="mem_name"  value="{$mes[0][mem_name]}"/></td>
+	</tr>
+	<tr>
+		<td align="right">性别</td>
+		<td><select name="sex" >
+		<if condition="$mes[0]['sex'] eq 0">
+				<option selected="selected" value='0'>男</option>
+				<option value='1'>女</option>
+		<elseif condition="$mes[0]['sex'] eq 1"/>
+				<option  value='0'>男</option>
+				<option selected="selected" value='1'>女</option>
+	
+		</select>
+		</if>
+		</td>
+	</tr>
+	<tr>
+		<td align="right">学号</td>
+		<td><input type="text" name="student_no" value="{$mes[0][student_no]}" /></td>
+	</tr>
+	<tr>
+		<td align="right">学习方向</td>
+		<td>
+			<select name="study_direction_id" >
+			<if condition="$mes[0]['study_direction_id'] eq 0">
+				<option selected="selected" value=0 >PHP</option>
+				<option value=1>IOS</option>
+				<option value=2>Android</option>
+				<option value=3>前端</option>
+				<option value=4>Java</option>
+				<option value=5>美工</option>
+				<option value=6>虚拟现实</option>
+				<option value=7>.Net</option>
+				<option value=8>C/C++</option>
+				<option value=9>其他</option>
+			<elseif condition="$mes[0]['study_direction_id'] eq 1"/>
+			<option  value=0 >PHP</option>
+				<option selected="selected" value=1>IOS</option>
+				<option value=2>Android</option>
+				<option value=3>前端</option>
+				<option value=4>Java</option>
+				<option value=5>美工</option>
+				<option value=6>虚拟现实</option>
+				<option value=7>.Net</option>
+				<option value=8>C/C++</option>
+				<option value=9>其他</option>
+			<elseif condition="$mes[0]['study_direction_id'] eq 2"/>
+			<option  value=0 >PHP</option>
+				<option value=1>IOS</option>
+				<option selected="selected" value=2>Android</option>
+				<option value=3>前端</option>
+				<option value=4>Java</option>
+				<option value=5>美工</option>
+				<option value=6>虚拟现实</option>
+				<option value=7>.Net</option>
+				<option value=8>C/C++</option>
+				<option value=9>其他</option>
+			<elseif condition="$mes[0]['study_direction_id'] eq 3"/>
+			<option  value=0 >PHP</option>
+				<option value=1>IOS</option>
+				<option value=2>Android</option>
+				<option selected="selected" value=3>前端</option>
+				<option value=4>Java</option>
+				<option value=5>美工</option>
+				<option value=6>虚拟现实</option>
+				<option value=7>.Net</option>
+				<option value=8>C/C++</option>
+				<option value=9>其他</option>
+			<elseif condition="$mes[0]['study_direction_id'] eq 4"/>
+			<option  value=0 >PHP</option>
+				<option value=1>IOS</option>
+				<option value=2>Android</option>
+				<option value=3>前端</option>
+				<option selected="selected" value=4>Java</option>
+				<option value=5>美工</option>
+				<option value=6>虚拟现实</option>
+				<option value=7>.Net</option>
+				<option value=8>C/C++</option>
+				<option value=9>其他</option>
+			<elseif condition="$mes[0]['study_direction_id'] eq 5"/>
+			<option  value=0 >PHP</option>
+				<option value=1>IOS</option>
+				<option value=2>Android</option>
+				<option value=3>前端</option>
+				<option value=4>Java</option>
+				<option selected="selected" value=5>美工</option>
+				<option value=6>虚拟现实</option>
+				<option value=7>.Net</option>
+				<option value=8>C/C++</option>
+				<option value=9>其他</option>
+			<elseif condition="$mes[0]['study_direction_id'] eq 6"/>
+			<option  value=0 >PHP</option>
+				<option value=1>IOS</option>
+				<option value=2>Android</option>
+				<option value=3>前端</option>
+				<option value=4>Java</option>
+				<option value=5>美工</option>
+				<option selected="selected" value=6>虚拟现实</option>
+				<option value=7>.Net</option>
+				<option value=8>C/C++</option>
+				<option value=9>其他</option>
+				<elseif condition="$mes[0]['study_direction_id'] eq 7"/>
+			<option  value=0 >PHP</option>
+				<option value=1>IOS</option>
+				<option value=2>Android</option>
+				<option value=3>前端</option>
+				<option value=4>Java</option>
+				<option value=5>美工</option>
+				<option value=6>虚拟现实</option>
+				<option selected="selected" value=7>.Net</option>
+				<option value=8>C/C++</option>
+				<option value=9>其他</option>
+				<elseif condition="$mes[0]['study_direction_id'] eq 8"/>
+			<option  value=0 >PHP</option>
+				<option value=1>IOS</option>
+				<option value=2>Android</option>
+				<option value=3>前端</option>
+				<option value=4>Java</option>
+				<option value=5>美工</option>
+				<option value=6>虚拟现实</option>
+				<option value=7>.Net</option>
+				<option  selected="selected" value=8>C/C++</option>
+				<option value=9>其他</option>
+				<elseif condition="$mes[0]['study_direction_id'] eq 9"/>
+			<option  value=0 >PHP</option>
+				<option value=1>IOS</option>
+				<option value=2>Android</option>
+				<option value=3>前端</option>
+				<option value=4>Java</option>
+				<option value=5>美工</option>
+				<option value=6>虚拟现实</option>
+				<option value=7>.Net</option>
+				<option value=8>C/C++</option>
+				<option selected="selected" value=9>其他</option>
+				
+			</if>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td align="right">所属类别</td>
+		<td>
+			<select name="member_type_id" value="{$mes[0]['member_type_id']}">
+			<if condition="$mes[0]['member_type_id'] eq 0"> 
+					<option  selected="selected" value='0'>新成员</option>
+					<option value='1'>实习组成员</option>
+					<option value='2'>测试组成员</option>
+					<option value='3'>研发组成员</option>
+					<option value='4'>项目经理</option>
+					<option value='5'>总负责人</option>
+					<option value='6'>指导老师</option>
+					<option value='7'>已毕业成员</option>
+			<elseif condition="$mes[0]['member_type_id'] eq 1"/>
+					<option   value='0'>新成员</option>
+					<option  selected="selected" value='1'>实习组成员</option>
+					<option value='2'>测试组成员</option>
+					<option value='3'>研发组成员</option>
+					<option value='4'>项目经理</option>
+					<option value='5'>总负责人</option>
+					<option value='6'>指导老师</option>
+					<option value='7'>已毕业成员</option>
+			<elseif condition="$mes[0]['member_type_id'] eq 2"/>
+			<option   value='0'>新成员</option>
+					<option   value='1'>实习组成员</option>
+					<option  selected="selected" value='2'>测试组成员</option>
+					<option value='3'>研发组成员</option>
+					<option value='4'>项目经理</option>
+					<option value='5'>总负责人</option>
+					<option value='6'>指导老师</option>
+					<option value='7'>已毕业成员</option>
+			<elseif condition="$mes[0]['member_type_id'] eq 3"/>
+			<option   value='0'>新成员</option>
+					<option value='1'>实习组成员</option>
+					<option value='2'>测试组成员</option>
+					<option selected="selected"  value='3'>研发组成员</option>
+					<option value='4'>项目经理</option>
+					<option value='5'>总负责人</option>
+					<option value='6'>指导老师</option>
+					<option value='7'>已毕业成员</option>
+			<elseif condition="$mes[0]['member_type_id'] eq 4"/>
+			<option   value='0'>新成员</option>
+					<option value='1'>实习组成员</option>
+					<option value='2'>测试组成员</option>
+					<option value='3'>研发组成员</option>
+					<option selected="selected" value='4'>项目经理</option>
+					<option value='5'>总负责人</option>
+					<option value='6'>指导老师</option>
+					<option value='7'>已毕业成员</option>
+			<elseif condition="$mes[0]['member_type_id'] eq 5"/>
+			<option   value='0'>新成员</option>
+					<option value='1'>实习组成员</option>
+					<option value='2'>测试组成员</option>
+					<option value='3'>研发组成员</option>
+					<option  value='4'>项目经理</option>
+					<option selected="selected" value='5'>总负责人</option>
+					<option value='6'>指导老师</option>
+					<option value='7'>已毕业成员</option>
+			<elseif condition="$mes[0]['member_type_id'] eq 6"/>
+			<option   value='0'>新成员</option>
+					<option value='1'>实习组成员</option>
+					<option value='2'>测试组成员</option>
+					<option value='3'>研发组成员</option>
+					<option value='4'>项目经理</option>
+					<option   value='5'>总负责人</option>
+					<option selected="selected" value='6'>指导老师</option>
+					<option value='7'>已毕业成员</option>
+			<elseif condition="$mes[0]['member_type_id'] eq 7"/>
+			<option   value='0'>新成员</option>
+					<option value='1'>实习组成员</option>
+					<option value='2'>测试组成员</option>
+					<option value='3'>研发组成员</option>
+					<option value='4'>项目经理</option>
+					<option value='5'>总负责人</option>
+					<option value='6'>指导老师</option>
+					<option selected="selected" value='7'>已毕业成员</option>
+					</if>
+			
+			</select>
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right">照片</td>
+		<td><input type="file"  name="image"  /></td>
+	</tr>
+	<tr>
+		<td align="right">电话号码</td>
+		<td><input type="text"  name="phone_num" value="{$mes[0][phone_num]}" /></td>
+	</tr>
+	<tr>
+		<td align="right">邮箱</td>
+		<td><input type="email"  name="e_mail" value="{$mes[0][e_mail]}" /></td>
+	</tr>
+	<tr>
+		<td align="right">QQ</td>
+		<td><input type="text"  name="qq" value="{$mes[0][qq]}" /></td>
+	</tr>
+	<tr>
+		<td align="right">已经学习过的方向</td>
+		<td><input type="text"  name="have_study_direction" value="{$mes[0][have_study_direction]}" /></td>
+	</tr>
+	
+	<tr>
+		<td align="right">是否毕业</td>
+		<td>
+		<select name="is_graduate">
+			<if condition="$mes[0]['is_graduate'] eq 0">
+				<option selected="selected" value='0'>未毕业</option>
+				<option value='1'>已毕业</option>
+		<elseif condition="$mes[0]['is_graduate'] eq 1"/>
+				<option  value='0'>未毕业</option>
+				<option selected="selected" value='1'>已毕业</option>
+	
+		</select>
+		</if>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2"><input type="submit"  value="修改成员" style="margin-left:80%"/></td>
+	</tr>
+
+</table>
+</form>
+</body>
+</html>

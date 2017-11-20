@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<link rel="stylesheet" href="{$Think.const.CSS_URL}/backstage.css">
+</head>
+
+<body>
+<div class="details">
+                    <div class="details_operation clearfix">
+                        <div class="bui_select">
+                            <input type="button" value="添&nbsp;&nbsp;加" class="add"  onclick="addAdmin()">
+                        </div>
+                            
+                    </div>
+                    <!--表格-->
+                    <table class="table" cellspacing="0" cellpadding="0">
+                        <thead>
+                            <tr>
+                                <th >编号</th>
+                                <th >管理员名称</th>
+                                <th >管理员权限</th>
+                                <th >管理员最后登录时间</th>
+                                <th >管理员是否在线</th>
+                                <th >管理员邮箱</th>
+                                <th >真实姓名</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <foreach name='mes' item='vo' key='k'>
+                            <tr>
+                            
+                                <!--这里的id和for里面的c1 需要循环出来-->
+                                <td>{$k+1}</td>
+                                <td>{$vo[user_name]}</td>
+                                <td>{$vo[user_limit_id]}</td>
+                                 <td>{$vo[lastlogin]}</td>
+                                  <td>{$vo[is_online]}</td>
+                                   <td>{$vo[email]}</td>
+                                   <td>{$vo[true_name]}</td>
+                                <td align="center"><input type="button" value="修改" class="btn" onclick="editAdmin({$vo['user_id']})"><input type="button" value="删除" class="btn"  onclick="delAdmin({$vo['user_id']})"></td>
+                            </tr>
+                        </foreach>
+                          
+                        </tbody>
+                    </table>
+                </div>
+                 <div class="pages">
+                        {$page}
+                </div>
+</body>
+<script type="text/javascript">
+
+	function addAdmin(){
+		window.location="{$Think.const.ROOT_URL}/admin.php/Home/User/addadmin";	
+	}
+	function editAdmin(user_id){
+			window.location="{$Think.const.ROOT_URL}/admin.php/Home/User/modifyadmin?user_id="+user_id;
+	}
+	function delAdmin(id){
+			if(window.confirm("您确定要删除吗？删除之后不可以恢复哦！！！")){
+				window.location="{$Think.const.ROOT_URL}/admin.php/Home/User/deladmin?act=delAdmin&id="+id;
+			} 
+	}
+</script>
+</html>

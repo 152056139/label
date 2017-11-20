@@ -1,0 +1,113 @@
+*{
+	font-family: "微软雅黑";
+}
+body{
+	overflow-x: hidden;
+	margin: 0 auto;
+}
+a{text-decoration: none;}
+.h720{height: 720px;}
+.h18{height: 18px;}
+.f34{font-size: 34px;}
+.c0094e1{color: #0094e1;}
+.cccc{color: #ccc;}
+.caaa{color: #aaa;}
+.c999{color: #999;}
+.c848484{color: #848484;}
+.cf0f0f0{color: #f0f0f0;}
+.cc5e1ef{color:#c5e1ef}
+.f24{font-size: 24px;}
+.mt44{margin-top: 44px;}
+.width1200{
+	width:1200px;
+	margin:0 auto;
+}
+.width73{
+	width: 73px;
+}
+
+/*viewmore*/
+.viewmore{width: 152px;height: 40px;margin:55px auto 0px;cursor: pointer;}
+
+
+.width1000{width:1300px;margin:0 auto;}
+.tell_us{width: 170px;
+	    position: relative;
+	    left:222px;
+	    top:-7px;
+    }
+.tell_us a{color: #42a5e5;}
+
+/*导航*/
+.nav{
+	height: 54px;
+	margin-bottom: 20px;	
+}
+.nav ul{
+	position: relative;
+	top: 31px;
+	right:0px;
+}
+.nav ul li:hover .normal{display:none;}
+.nav ul li:hover .hover{display: block;}
+.nav ul a{
+	text-decoration: none;
+	color: #4a4a4a;
+}
+.nav ul .hover{
+	display: none;
+}
+.nav ul .li1:nth-child(2)  .hover{display:block;}
+.nav .li1:hover .normal{
+	display: none;
+}
+.nav .li1:hover .hover{
+	display: block;
+}
+.nav .li1:hover .hover a{
+	color: #42A5E5;
+}
+.nav ul .li1 .active{color: #42A5E5;}
+
+.img{margin-bottom: 60px;}
+
+.body_content{}
+.body_left{width:200px;margin-right: 60px;height:310px;margin-left:22px;}
+.body_left .box{width: 100%;height:70px;margin-bottom:10px;background: #f0f0f0;padding-top: 10px;padding-left: 20px;box-sizing: border-box;}
+.body_left>.box:last-child{margin-bottom:0px;}
+.body_left .box .small_hr{width:50px;height:2px;background: #666;margin-top: 7px;}
+.body_right{width:736px;position: relative;}
+.body_right .rt_header img{margin-right: 10px;}
+.body_right .rt_header span{letter-spacing: 2px;position: absolute;top:-4px;}
+.body_right .rt_header .bread{color:#42A5E5;}
+.body_right .rt_hr{height:1px;width:100%;background: #f0f0f0;margin-top: 15px;margin-bottom: 50px;}
+.body_right .rt_main .rt_title{margin:0 auto 25px;width:300px;height:30px;}
+.body_right .rt_main .rt_font{font-size: 13px;color:#666;line-height:25px;text-indent: 20px;}
+.body_right .rt_main .rule-photo{margin: 30px auto;}
+.body_right .rt_main .rt_rule{font-size: 14px;color:#666;line-height:35px;}
+
+.body_right .rt_main .photo01{margin-top: 60px;margin-bottom: 70px;}
+.body_right .rt_main .photo02{margin:60px auto 35px;width: 628px;display: block;}
+
+.body_right .rt_main  .photo_ul li{width:232px;height:180px;float:left;margin-right:20px;margin-bottom: 50px;position: relative;}
+.body_right .rt_main  .photo_ul>li:nth-child(3n){margin-right: 0px;}
+.body_right .rt_main  .photo_ul li img{width: 232px;height:180px;}
+.body_right .rt_main  .photo_ul li .map_photo{height:40px;width: 100%;background: rgba(69,175,231,0.8);position: absolute;left: 0px;top:140px;}
+.body_right .rt_main  .photo_ul li .map_photo:hover{background: rgba(0,0,0,0.6);cursor: pointer;}
+.body_right .rt_main  .photo_ul li span{color: #fff;position: absolute;left:20px;top:148px;font-size: 14px;}
+.body_right .rt_main  .photo_ul li .arrow{position: absolute;left:200px;top:150px;width:20px;height: 20px;}
+
+.body_right .rt_main .pager_ul{width: 285px;margin-top:120px;margin-left:222px;}
+.body_right .rt_main .pager_ul li{float: left;width:35px;height:35px;border: 1px solid #d5e1ef;margin-right: 15px;text-align: center;font-size: 13px;padding-top: 7px;box-sizing:border-box;}
+.body_right .rt_main .pager_ul>li:last-child{margin-right: 0px;}
+
+.container{width:600px;height:400px;overflow: hidden;position: fixed;left:450px;top:120px;z-index: 2001;border: 4px solid #fff;}
+.container .banner{width:5400px;height:400px;position: absolute;}
+.container .banner li{float: left;width:600px;height:400px;}
+.container .banner li img{width:600px;height:400px;}
+.mask{background: rgba(0,0,0,0.7);z-index: 2000;position: absolute;top:0px;nargin:0 auto;width:100%;height:2548px;}
+.close{position: absolute;left:555px;top:10px;}
+.pre{position: absolute;left: 10px;top:160px;}
+.next{position: absolute;right: 10px;top:160px;}
+.pre img,.next img{width: 70px;height:60px;}
+

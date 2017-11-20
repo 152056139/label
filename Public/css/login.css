@@ -1,0 +1,57 @@
+@CHARSET "UTF-8";
+body{
+	background-color:#2F2724;
+	width:100%;
+	height:100%;
+}
+#outer{
+	width:300px;
+	height:200px;
+	border:4px solid #2F2724;
+	background-color:white;
+	position:absolute;
+	left:50%;
+	top:50%;
+	transform:translate(-50%,-50%);
+	 border: 2px solid #dedede;
+   -moz-border-radius: 15px;      /* Gecko browsers */
+   -webkit-border-radius: 15px;   /* Webkit browsers */
+   border-radius:10px;  			/* W3C syntax */
+	
+}
+#inner{
+	position:absolute;
+	left:50%;
+	top:50%;
+	transform:translate(-50%,-50%);
+	
+}
+#login_submit{
+	margin-left:150px;
+	
+	width:80px;
+	height:30px;
+	font:15px "微软雅黑";
+    border: 2px solid #dedede;
+    -moz-border-radius: 15px;      /* Gecko browsers */
+    -webkit-border-radius: 15px;   /* Webkit browsers */
+    border-radius:15px;  /* W3C syntax */
+    float:left;
+         
+}
+
+#saveCookie{
+	margin-left:0px;
+	
+}
+#user_name{
+	width:220px;
+	height:25px;
+}
+#password{
+	width:220px;
+	height:25px
+}
+#login_reg a{
+	margin-left:160px;
+}

@@ -1,0 +1,83 @@
+
+@CHARSET "UTF-8";
+*{
+	font-family: "微软雅黑";
+}
+body{
+	overflow-x: hidden;
+	margin: 0 auto;
+}
+a{text-decoration: none;}
+.h720{height: 720px;}
+.h18{height: 18px;}
+.f34{font-size: 34px;}
+.c0094e1{color: #0094e1;}
+.cccc{color: #ccc;}
+.caaa{color: #aaa;}
+.c999{color: #999;}
+.c848484{color: #848484;}
+.cf0f0f0{color: #f0f0f0;}
+.cc5e1ef{color:#c5e1ef}
+.f24{font-size: 24px;}
+.mt44{margin-top: 44px;}
+.width100%{
+	width:100%;
+}
+.width20%{
+	width:20%;
+}
+.width80%{
+	width:80%;
+}
+.width1200{
+	width:1200px;
+	margin:0 auto;
+}
+.width73{
+	width: 73px;
+}
+.header .logo img{width:268px;margin-top:6px;margin-left:-23px;}
+.header .logo{margin-left:100px;}
+/*viewmore*/
+.viewmore{width: 152px;height: 40px;margin:55px auto 0px;cursor: pointer;}
+
+
+.width1000{width:1300px;margin:0 auto;}
+.tellus{width: 250px;
+	    position: relative;
+	    left:110px;
+    }
+.tellus a{color: #42a5e5;}
+
+/*导航*/
+.nav{
+	height: 54px;
+	margin-bottom: 20px;	
+}
+.nav ul{
+	position: relative;
+	top: 31px;
+	right:0px;
+}
+.nav ul li:hover .normal{display:none;}
+.nav ul li:hover .hover{display: block;}
+.nav ul a{
+	text-decoration: none;
+	color: #4a4a4a;
+}
+.nav ul .hover{
+	display: none;
+}
+.nav ul .li1:nth-child(2)  .hover{display:block;}
+.nav .li1:hover .normal{
+	display: none;
+}
+.nav .li1:hover .hover{
+	display: block;
+}
+.nav .li1:hover .hover a{
+	color: #42A5E5;
+}
+.nav ul .li1 .active{color: #42A5E5;}
+
+.img{margin-bottom: 60px;}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<link rel="stylesheet" href="{$Think.const.CSS_URL}/base.css" />
+	<link rel="stylesheet" type="text/css" href="{$Think.const.CSS_URL}/bottom.css"/> 
+</head>
+<body>
+<!--表单strart-->
+			<div class="biaodan" >
+				<div class="content bc">
+					<div class="left fl">
+						<div class="title">
+							<div class="title-big f30 c0094e1">我要加入</div>
+							<div class="title-small f12 caaa">我们真诚欢迎你的加入</div>
+						</div>
+						<div class="real-form">
+							<form action="/expment/home.php/Home/Member/addteacherhandle" method="post" enctype="multipart/form-data">
+								<ul>
+									
+									<li>
+										<input type="text" placeholder="姓名 :" required="required" name="mem_name"/>
+									</li>
+									<li>
+									<p  style="float:left; color:#A9A9A9;margin-top:10px;margin-left:20px;">性别: &nbsp;</p>
+										
+										<label style="color:#A9A9A9;"><input name="sex" type="radio" value="0" style="margin-top:15px;margin-left:20px;" />男 </label> 
+										<label style="color:#A9A9A9;"><input name="sex" type="radio" value="1" style="margin-top:15px;margin-left:20px;"/>女 </label> 
+										
+									</li>
+									<li>
+										<input type="text" placeholder="学号 :" required="required" name="student_no"/>
+									</li>
+									<li>
+										<input type="text" placeholder="qq:" required="required" name="qq"/>
+									</li>
+									<li>
+										<input type="text" placeholder="手机号码 :" required="required" name="phone_num"  />
+									</li>
+									<li>
+										<input type="text" placeholder="邮箱 :" required="required" name="e_mail" />
+									</li>
+									
+									<textarea name="" placeholder="个人简介:" required="required" name="detail_info"></textarea>
+									<div class="last">
+										<div class="last-top">
+											<input type="text" placeholder="已经学习过的方向 :" required="required" name="have_study_direction" />
+										</div>
+										
+										<div class=" tc" style="background-color:#ffffff;height:40px;width:230px;margin-top:15px;padding-top:10px;">
+											<input style="height:25px;" type='text' name='image_1' id='textfield' class='txt' placeholder="请上传照片"/>  
+ 											<input type='button' class='btn' value='浏览...' />
+											<input  type="file" name="image" class="file" id="fileField" size="28" onchange="document.getElementById('textfield').value=this.value" />
+										</div>
+									</div>
+										
+								<div class="lastl">
+								<input type="submit" class="last-btn  f17" value="提交申请" ></input>
+								</div>
+								</ul>
+								
+							</form>
+						</div>
+					</div>
+					<div class="right fr">
+						<div class="title">
+							<div class="title-big f30 c0094e1">联系我们</div>
+							<!--  <div class="title-small f12 caaa">如有任何问题,可以拨打以下电话联系我们!</div>-->
+						</div>
+						<div class="touch-us touch-us1">
+							<div class="touch-us1-title f15">创新实践基地</div>
+							<div class="touch-us-content content1 f14 c848484">地址 : 山西省太原市尖草坪区新兰路31号太原工业学院电子楼603</div>
+							
+						</div>
+						<br/>
+						<br/>
+						<div class="touch-us touch-us1">
+							<div class="touch-us1-title f15">研究所</div>
+							<div class="touch-us-content content1 f14 c848484">地址 : 山西省太原市尖草坪区新兰路31号太原工业学院电子楼605</div>
+							
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				
+			</div>
+		<!--表单end-->
+		<!--footer start-->
+		<!--结尾start-->
+		<div class="below">
+			<div class="content">
+			<!-- 底部-左侧 -->
+				<div class="left fl">
+					<div class="wenzibiaoti1">教学资源</div>
+					<div class="wenzi1-left fl">
+						<ul>
+							<li><a href="http://www.cdstm.cn/" target="view_window">中国数字科技馆</a></li>
+							<li><a href="http://www.meeting.edu.cn/meeting/" target="view_window">学术会议在线</a></li>
+							<li><a href="http://www.icourses.cn/home/" target="view_window">大学网络课程</a></li>
+							
+						</ul>
+						<div class="clear"></div>
+					</div>
+					<div class="wenzi1-right fl">
+						<ul>
+							<li><a href="http://www.paper.edu.cn/" target="view_window">科技论文在线</a></li>
+							<li><a href="http://www.eol.cn/html/sitemap/404.shtml" target="view_window">中国教育黄页</a></li>
+							<li><a href="http://tsg.tit.edu.cn/" target="view_window">资源统一检索平台</a></li>
+							
+						</ul>
+						<div class="clear"></div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			<!-- 底部-中间 -->
+				<div class="center fl">
+					<div class="wenzibiaoti2">相关咨询</div>
+					<div class="wenzi2-left fl">
+						<ul>
+							<li><a href="#">JAVA实训视频</a></li>
+							<li><a href="#">PHP大牛分享</a></li>
+							<li><a href="#">Android教程</a></li>
+							<li><a href="#">程序员之家</a></li>
+							<li><a href="#">MOOC学习网</a></li>
+						</ul>
+						<div class="clear"></div>
+					</div>
+					<div class="wenzi2-right fl">
+						<ul>
+							<li><a href="#">项目实训</a></li>
+							<li><a href="#">UI设计</a></li>
+							<li><a href="#">WEB前段</a></li>
+							<li><a href="#">.NET菜鸟教程</a></li>
+							<li><a href="#">IOS训练</a></li>
+						</ul>
+						<div class="clear"></div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			<!-- 底部-右侧 -->
+				<div class="right fl">
+					<!--  <div class="wenzibiaoti3">进入微网</div>-->
+					<div class="wenzi3-left fl">
+						<div class="erweima">
+							<img src="{$Think.const.IMG_URL}/erweima.png"/>
+						</div>
+						<!--  <div class="wenzi">扫一扫&nbsp;&nbsp;进入微网</div>-->
+						<div class="clear"></div>
+					</div>
+					<div class="wenzi3-right fl">
+						<div class="dizhi">
+						<p>扫一扫进入太原工业学院计算机应用能力竞赛</p>
+						<p>版权所有：太原工业学院</p>
+						<p>地址 : 山西省太原市尖草坪区新兰路31号太原工业学院电子楼603&nbsp;&nbsp;&nbsp;</p></div>
+							
+						<div class="clear">
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>

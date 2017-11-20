@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h3>添加项目</h3>
+<form action="/expment/admin.php/Home/Pro/addprohandle" method="post" enctype="multipart/form-data">
+<table width="70%" border="1" cellpadding="5" cellspacing="0" bgcolor="#cccccc">
+	<tr>
+		<td align="right">项目名称</td>
+		<td><input type="text"  name="pro_name" placeholder="请输入标题" required="required"/></td>
+	</tr>
+	<tr>
+		<td align="right">项目开始时间</td>
+		<td><input type="date" name="start_time" placeholder="格式为:2016-6-6" required="required"/></td>
+	</tr>
+	<tr>
+		<td align="right">项目结束时间</td>
+		<td><input type="date" rows="5" cols="60" name="end_time"  placeholder="格式为:2016-6-6" required="required"/></td>
+	</tr>
+	<tr>
+		<td align="right">项目负责人</td>
+		<td><input type="text" placeholder="请填入项目负责人" name="manage" required="required"/></td>
+	</tr>
+	<tr>
+		<td align="right">指导老师</td>
+		<td><input type="text" placeholder="请填入指导老师" name="teacher_id" required="required"/></td>
+	</tr>
+	<tr>
+		<td align="right">项目来源</td>
+		<td><input type="text" name="pro_sources" required="required"/></td>
+	</tr>
+	<tr>
+		<td align="right">项目介绍</td>
+		<td>
+		<textarea name="pro_introduce" required="required"></textarea>
+		
+	</tr>
+	<tr>
+		<td align="right">项目成员</td>
+		<td>
+			<select name="mem_id[]" multiple="multiple"  style="width:500px;">
+			<foreach name="mes" item="vo" key='k'>
+				<option value="{$vo.mem_id}" >{$vo.mem_name}</option>
+				
+			</foreach>
+		</select>	
+		</td>
+	</tr>
+	<tr>
+		<td align="right">项目类型</td>
+	
+		<td>
+		<select name="pro_type" >
+			
+					<option value='0'>即将开始的项目</option>
+					<option value='1'>正在进行的项目</option>
+					<option value='2'>已经完成的项目</option>
+					
+		</select>
+		</td>	
+	</tr>
+	<tr>
+		<td align="image">项目图片</td>
+		<td>
+			<input type="file" name="image" />
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2"><input type="submit"  value="确认添加" style="margin-left:80%"/></td>
+	</tr>
+
+</table>
+</form>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="{$Think.const.CSS_URL}/base.css"/>
+		<link rel="stylesheet" href="{$Think.const.CSS_URL}/css1.css" />
+		<link rel="stylesheet" href="{$Think.const.CSS_URL}/fenye.css" />
+		
+		<script src="{$Think.const.JS_URL}/jquery-1.8.0.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<include file="Public:header" />
+		<div class="img"><img src="{$Think.const.IMG_URL}/成员风采img/成员风采.jpg" alt="" width="100%"></div>
+		<div class="jieshao" id="aaa">
+			<div class="left">
+				<ul>
+					<li >
+					<a href="__APP__/Home/Member/gettrainmember#aaa">
+						<div class="text" >
+							<p class=" f15">Practice Team</p>
+							<p class=" f15">实习组</p>
+							<p class="line"></p>
+						</div>
+						<div class="mengban">
+							<p class="fff f15">Practice Team</p>
+							<p class="fff f15">实习组</p>
+							<p class="line1"></p>
+						</div>
+						</a>
+					</li>
+					<li >
+					<a href="__APP__/Home/Member/gettestmember#aaa">
+						<div class="text" >
+							<p class=" f15">Test Team</p>
+							<p class=" f15">测试组</p>
+							<p class="line"></p>
+						</div>
+						<div class="mengban">
+							<p class="fff f15">Test Team</p>
+							<p class="fff f15">测试组</p>
+							<p class="line1"></p>
+						</div>
+						</a>
+					</li>
+					<li >
+					<a href="__APP__/Home/Member/getresearchmember#aaa">
+						<div class="text" style="background-color:#0094E1;">
+							<p class="fff f15">R&D Team</p>
+							<p class="fff f15">研发组</p>
+							<p class="line"></p>
+						</div>
+						<div class="mengban">
+							<p class="fff f15">R&D Team</p>
+							<p class="fff f15">研发组</p>
+							<p class="line1"></p>
+						</div>
+						</a>
+					</li>
+					<li >
+					<a href="__APP__/Home/Member/getmanagemember#aaa">
+						<div class="text">
+							<p class=" f15">Project manager</p>
+							<p class=" f15">项目经理</p>
+							<p class="line"></p>
+						</div>
+						<div class="mengban">
+							<p class="fff f15">Project manager</p>
+							<p class="fff f15">项目经理</p>
+							<p class="line1"></p>
+						</div>
+						</a>
+					</li>
+					<li >
+					<a href="__APP__/Home/Member/gethasgraduate#aaa">
+						<div class="text">
+							<p class="f15">Had graduate</p>
+							<p class="f15">已毕业成员</p>
+							<p class="line"></p>
+						</div>
+						<div class="mengban">
+							<p class="fff f15">Had graduate</p>
+							<p class="fff f15">已毕业成员</p>
+							<p class="line1"></p>
+						</div>
+						</a>
+					</li>
+					<div class="clear"></div>
+				</ul>
+			</div>
+			<div class="right">
+				<div class="xinxi">
+					<div class="zuanshi"><img src="{$Think.const.IMG_URL}/icon_zhuanshi.png"/></div>
+					<div class="xinxia"><span class="f17">首页&nbsp;/&nbsp;成员风采&nbsp;/&nbsp;研发组</span></div>
+				</div>
+				<div class="photo">
+					<div class="lunbo">
+						<ul>
+						<foreach name="mes" item="mes" key="k">
+							    <li class="tu2">
+							    	<img src="{$Think.const.IMG}{$mes['image']}"/>
+							    	<div class="mengban2">
+							        	<div class="bod1"><p class="c0094e1  f20 tc">{$mes['mem_name']}</p></div>
+							        	<div class="bod2"><p class="f14 tc yanse">
+							        		<if condition="$mes['member_type_id'] eq 0"> 
+											新成员
+											<elseif condition="$mes['member_type_id'] eq 1"/>
+											实习组成员	
+											<elseif condition="$mes['member_type_id'] eq 2"/>
+											测试组成员
+											<elseif condition="$mes['member_type_id'] eq 3"/>
+											研发组成员
+											<elseif condition="$mes['member_type_id'] eq 4"/>
+											项目经理
+											<elseif condition="$mes['member_type_id'] eq 5"/>
+											总负责人
+											<elseif condition="$mes['member_type_id'] eq 6"/>
+											指导老师
+											<elseif condition="$mes['member_type_id'] eq 7"/>
+											已毕业成员
+											
+											</if>
+							        	
+							        	
+							        	
+							        	 &nbsp;/ &nbsp;
+							        	 	<if condition="$mes['study_direction_id'] eq 0"> 
+											PHP
+											<elseif condition="$mes['study_direction_id'] eq 1"/>
+											IOS
+											<elseif condition="$mes['study_direction_id'] eq 2"/>
+											Android
+											<elseif condition="$mes['study_direction_id'] eq 3"/>
+											前端
+											<elseif condition="$mes['study_direction_id'] eq 4"/>
+											Java
+											<elseif condition="$mes['study_direction_id'] eq 5"/>
+											美工
+											<elseif condition="$mes['study_direction_id'] eq 6"/>
+											虚拟现实
+											<elseif condition="$mes['study_direction_id'] eq 7"/>
+											.NET
+											<elseif condition="$mes['study_direction_id'] eq 8"/>
+											C/C++
+											<elseif condition="$mes['study_direction_id'] eq 9"/>
+											其他
+											</if>
+									
+							        	 
+							        	 
+							        	 </p></div>
+							        	<div class="bod3"><p></p></div>
+							        	<a href="__APP__/Home/Member/getdetail?mem_id={$mes['mem_id']}"><div class="bod5">查看个人详细</div></a>
+							        </div>
+							        <div class="toux"><img src="{$Think.const.IMG}{$mes['image']}" style="width:100%;height:100%;"/></div>
+							         <div class="riqi2">
+							         	<div class="shang4 tc">
+							         		<div><span class=" f18 tc">{$mes['mem_name']}</span></div>
+							         		<div class="mar2"><span class="f13 tc yanse">
+							         		<if condition="$mes['member_type_id'] eq 0"> 
+											新成员
+											<elseif condition="$mes['member_type_id'] eq 1"/>
+											实习组成员	
+											<elseif condition="$mes['member_type_id'] eq 2"/>
+											测试组成员
+											<elseif condition="$mes['member_type_id'] eq 3"/>
+											研发组成员
+											<elseif condition="$mes['member_type_id'] eq 4"/>
+											项目经理
+											<elseif condition="$mes['member_type_id'] eq 5"/>
+											总负责人
+											<elseif condition="$mes['member_type_id'] eq 6"/>
+											指导老师
+											<elseif condition="$mes['member_type_id'] eq 7"/>
+											已毕业成员
+											
+											</if>
+							        	
+							        	
+							        	
+							        	 &nbsp;/ &nbsp;
+							        	 	<if condition="$mes['study_direction_id'] eq 0"> 
+											PHP
+											<elseif condition="$mes['study_direction_id'] eq 1"/>
+											IOS
+											<elseif condition="$mes['study_direction_id'] eq 2"/>
+											Android
+											<elseif condition="$mes['study_direction_id'] eq 3"/>
+											前端
+											<elseif condition="$mes['study_direction_id'] eq 4"/>
+											Java
+											<elseif condition="$mes['study_direction_id'] eq 5"/>
+											美工
+											<elseif condition="$mes['study_direction_id'] eq 6"/>
+											虚拟现实
+											.NET
+											<elseif condition="$mes['study_direction_id'] eq 8"/>
+											C/C++
+											<elseif condition="$mes['study_direction_id'] eq 9"/>
+											其他
+											</if>
+							         		</span></div>
+							         	</div>
+							         </div>
+							     </li>
+						   </foreach>
+						         <div class="clear"></div>
+						</ul>
+						
+					</div>
+			</div>
+		<div class="pages"> {$page}</div>
+		
+		</div>
+	</div>
+	
+	<include file="Public:bottom" />
+	</body>
+	<script type="text/javascript">
+			i=0;
+			$('.jieshao .right .fanye ul li').click(function(){
+				$('.jieshao .right .photo .lunbo').stop();
+				i = $(this).index();
+				$('.jieshao .right .photo .lunbo').animate({'left':-i*960},500);
+				$('.banner ul.number li').eq(i)
+				
+			});
+		
+	</script>
+</html>

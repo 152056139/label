@@ -1,0 +1,39 @@
+
+@CHARSET "UTF-8";
+*{
+	font-family: "微软雅黑";
+}
+/*表单*/
+.biaodan{background-color: #f2f2f2;padding-top: 50px;padding-bottom: 55px;height:400px;}
+.biaodan .content{width: 1120px;height: 340px;}
+.biaodan .content .left{width: 754px;height:340px;}
+.biaodan .content .left .title{width:160px;height: 45px;background: url('{$Think.const.IMG_URL}/icon_shutiao.png') no-repeat 0 5px;padding-left: 20px;margin-bottom: 48px;line-height: 33px;}
+.biaodan .content .left .real-form{height: 242px;}
+.biaodan .content .left .real-form ul{width:800px}
+.biaodan .content .left .real-form li{width: 230px;height: 45px;background-color: #fff;float:left;margin-right:30px;margin-bottom: 20px;}
+.biaodan .content .left .real-form li input[type="text"]{width:100%;height: 100%;border: 0px;padding-left: 20px;
+box-sizing: border-box;font-size: 15px;}
+.biaodan .content .left .real-form textarea{width: 490px;height: 110px;padding: 15px;box-sizing: border-box;resize:none;float:left;margin-right:30px;font-size: 15px;border: 0;}
+.biaodan .content .left .real-form .last{float: left;font-size: 15px;position:relative;}
+.biaodan .content .left .real-form .last .last-top{width:230px;height:45px;}
+.biaodan .content .left .real-form .last .last-top input[type="text"]{width: 100%;height: 100%;padding-left:20px ;box-sizing: border-box;color: #a9a9a9;border: 0;}
+
+.file{position:absolute;margin-left:-38px; filter:alpha(opacity:0);opacity: 0;width:38px;height:25px; }
+.biaodan .content .left .real-form .last .last-btn{width: 230px;height: 45px;background-color: #0094E1;line-height: 45px;color: #fff;margin-top: 15px;cursor: pointer;}
+.biaodan .content .right .title{height: 45px;background: url('../img/icon_shutiao.png') no-repeat 0 5px;padding-left: 20px;margin-bottom: 48px;}
+.biaodan .content .right{width:282px;height:340px;}
+.biaodan .content .right .touch-us{line-height: 29px;}
+.biaodan .content .right .touch-us .touch-us-content{padding-left: 20px;box-sizing: border-box;}
+.biaodan .content .right .touch-us .touch-us-content.content1{background: url({$Think.const.IMG_URL}/icon_dizhi.png) no-repeat 0 8px;}
+.biaodan .content .right .touch-us .touch-us-content.content2{background: url({$Think.const.IMG_URL}/icon_tel.png) no-repeat 0 8px;}
+/*footer*/
+/*结尾开始*/
+.jiewei{width: 1200px;height:300px;margin:0 auto;}
+.jiewei .erweizi{width:200px;height:37px;margin: 0 auto;}
+.jiewei .zuihou{width: 850px;margin: 25px auto;}
+.jiewei .nav{width: 850px;margin:0 auto;}
+
+.jiewei  ul li .hover{display: none;}
+.jiewei  ul li:hover .normal{display:none;}
+.jiewei  ul li:hover .hover{display: block;}
+/*结尾结束*/

@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<link rel="stylesheet" href="{$Think.const.CSS_URL}/backstage.css">
+</head>
+
+<body>
+<div class="details">
+                    <div class="details_operation clearfix">
+                        <div class="bui_select">
+                            <input type="button" value="添&nbsp;&nbsp;加" class="add"  onclick="addNotice()">
+                        </div>
+                            
+                    </div>
+                    <!--表格-->
+                    <table class="table" cellspacing="0" cellpadding="0">
+                        <thead>
+                        <input name="notice_id" value="{mes[0][notice_id]}" type="hidden"/>
+                            <tr>
+                                <th >编号</th>
+                                <th >公告标题</th>
+                                <th>公告内容</th>
+                                <th >发布人</th>
+                                <th >发布时间</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <foreach name='mes' item='vo' key='k'>
+                            <tr>
+                                <!--这里的id和for里面的c1 需要循环出来-->
+                                <td>{$k+1}</td>
+                                <td>{$vo[title]}</td>
+                                <td>{$vo[text]|substr=0,20}</td>
+                                <td>{$vo[mem_id]}</td>
+                                <td>{$vo[time]}</td>
+                                <td align="center"><input type="button" value="修改/查看详情" class="btn" onclick="editNotice({$vo['notice_id']})"><input type="button" value="删除" class="btn"  onclick="delNotice({$vo['notice_id']})"></td>
+                            </tr>
+                        </foreach>
+                          
+                        </tbody>
+                    </table>
+                </div>
+                 <div class="pages">
+                        {$page}
+                </div>
+</body>
+<script type="text/javascript">
+
+	function addNotice(){
+		window.location="{$Think.const.ROOT_URL}/admin.php/Home/Notice/addnotice";	
+	}
+	function editNotice(id){
+			window.location="{$Think.const.ROOT_URL}/admin.php/Home/Notice/modifynotice?notice_id="+id;
+	}
+	function delNotice(id){
+			if(window.confirm("您确定要删除吗？删除之后不可以恢复哦！！！")){
+				window.location="{$Think.const.ROOT_URL}/admin.php/Home/Notice/delnotice?notice_id="+id;
+			} 
+	}
+</script>
+</html>

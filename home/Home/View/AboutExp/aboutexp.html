@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>基地介绍</title>
+	<link rel="stylesheet" type="text/css" href="{$Think.const.CSS_URL}/base.css">
+	<link rel="stylesheet" type="text/css" href="{$Think.const.CSS_URL}/aboutexp.css">
+	<script src="{$Think.const.JS_URL}/jquery-1.8.0.min.js" type="text/javascript" charset="utf-8"></script>
+
+	<script type="text/javascript">
+	  $(function(){
+	  	// 声明默认样式
+	  	$("#introduce").attr("style","color:#fff;background:#0094e1;");
+	  	$("#introduce").children(".small_hr").attr("style","background:#fff;")
+	  	$(".introduce").show().parent().siblings(".rt_main").hide();
+     
+	  	$(".box").hover(function(){
+	  	// 点击后的样式改变
+          $(this).attr("style","color:#fff;background:#0094e1;").siblings().attr("style","color:#000;background:#f0f0f0;");
+          $(this).children(".small_hr").attr("style","background:#fff;").parent().siblings().children(".small_hr").attr("style","background:#666");
+       // 点击后相应面包屑导航改变 
+          var text=$(this).find("span").text();
+          $(".rt_header").find("strong").text(text);
+      // 点击后相应主体内容改变
+          var id=$(this).attr("id");
+          $(".rt_main").each(function(){
+              if($.trim($(this).children().attr("class"))==$.trim(id))
+                {
+                   $(this).show().siblings(".rt_main").hide();
+                }             
+          });  
+       	});
+
+
+        // 创建节点(遮罩层、模态框）
+       	var $mask=$("<div class='mask'></div>");
+       	var $carousel_box=$("<div class='container'><ul class='banner'><li class='items'><img src='{$Think.const.IMG_URL}/基地介绍img/environment_images/02工业学院工程系学习环境a_01.png' alt=''></li><li class='items'><img src='{$Think.const.IMG_URL}/基地介绍img/environment_images/02工业学院工程系学习环境a_02.png' alt=''></li><li class='items'><img src='{$Think.const.IMG_URL}/基地介绍img/environment_images/02工业学院工程系学习环境a_03.png' alt=''></li><li class='items'><img src='{$Think.const.IMG_URL}/基地介绍img/environment_images/02工业学院工程系学习环境a_04.png' alt=''></li><li class='items'><img src='{$Think.const.IMG_URL}/基地介绍img/environment_images/02工业学院工程系学习环境a_05.png' alt=''></li><li class='items'><img src='{$Think.const.IMG_URL}/基地介绍img/environment_images/02工业学院工程系学习环境a_06.png' alt=''></li><li class='items'><img src='{$Think.const.IMG_URL}/基地介绍img/environment_images/02工业学院工程系学习环境a_07.png' alt=''></li><li class='items'><img src='{$Think.const.IMG_URL}/基地介绍img/environment_images/02工业学院工程系学习环境a_08.png' alt=''></li><li class='items'><img src='{$Think.const.IMG_URL}/基地介绍img/environment_images/02工业学院工程系学习环境a_09.png' alt=''></li></ul></div>");
+       	var $pre=$("<div class='pre'><img src='{$Think.const.IMG_URL}/基地介绍img/pre.png' alt=''></div>");
+       	var $next=$("<div class='next'><img src='{$Think.const.IMG_URL}/基地介绍img/next.png' alt=''></div>");
+       	var $close=$("<div class='close'><img src='{$Think.const.IMG_URL}/基地介绍img/close.png'></div>");
+
+
+        // 点击后加入节点
+       	$(".map_photo").click(function(){
+       		$(this).attr("style","background:rgba(0,0,0,0.6);")
+       		// var swidth=$(document.body).width()+"px";      		
+       		// var sheight=$(document.body).height()+"px";       	    
+            $(document.body).append($mask); 
+            $carousel_box.append($pre);
+            $carousel_box.append($next);          
+            $carousel_box.append($close);
+            $(document.body).append($carousel_box); 
+
+        // 点击close关闭
+        $close.click(function(){
+            $carousel_box.remove();
+            $mask.remove();
+            $(".map_photo").attr("style","background:rgba(69,175,231,0.8);")
+            });
+        // 点击遮罩层关闭
+       	$mask.click(function(){
+            $carousel_box.remove();
+            $mask.remove();
+            $(".map_photo").attr("style","background:rgba(69,175,231,0.8);")
+            }); 
+        // 将当前图片设为首张图片
+        var index=$(this).parent("li").index();
+        var $li=$(".banner").children().eq(index);
+        $(".banner").animate({left:-index*600},500);
+        
+
+       	// var i=0;
+       	// // 自动轮播
+       	// var timer=setInterval(function(){
+       	// 	i++;
+       	// 	if(i==9){
+       	// 		i=0;
+       	// 	}
+        //     $(".banner").animate({left:-i*600},500);
+       	// },2000);
+       	
+
+
+       	// 前后箭头轮播
+       	$pre.click(function(){ 	
+       	    		
+       		if(index==0){
+       			index=8;
+       		} 
+       		else{
+       			index--;
+       		}     
+       		$(".banner").animate({left:-index*600},500);
+       	});
+
+       	$next.click(function(){ 
+       	               
+       		if(index==8){
+       			index=0;
+       		}
+       		else{
+       			index++;
+       		}		
+       		$(".banner").animate({left:-index*600},500); 
+       		
+       	});
+    });   
+        // 分页效果
+        $(".pagers3").attr("style","background:#00a5ef;color:#fff;");
+        $(".environment_two").hide();
+        $(".pager_ul").children("li").click(function(){
+        	$(this).attr("style","background:#00a5ef;color:#fff;cursor:pointer;");
+        	$(this).siblings().attr("style","background:#fff;color:#000;cursor:pointer;")
+        });
+        $(".pagers4").click(function(){
+            $(".environment_two").show();
+            $(".environment").hide();
+        });
+        $(".pagers5").click(function(){
+            $(".environment_two").show();
+            $(".environment").hide();
+        });
+        $(".pagers6").click(function(){
+            $(".environment_two").show();
+            $(".environment").hide();
+        });
+
+        
+        $(".pagers1").click(function(){
+            $(".environment_two").hide();
+            $(".environment").show();
+        });
+        $(".pagers2").click(function(){
+            $(".environment_two").hide();
+            $(".environment").show();
+        });
+        $(".pagers3").click(function(){
+            $(".environment_two").hide();
+            $(".environment").show();
+        });
+
+	  });
+		
+</script>
+
+</head>
+<body>
+    <include file="Public:header" />
+    
+    <!-- 图片 -->
+    <div class="img"><img src="{$Think.const.IMG_URL}/基地介绍img/基地介绍.jpg" alt="" width="100%"></div>
+    <div class="width1000 body">
+      <div class="body_content">
+	    <div class="body_left fl">
+	    	<div class="box" id="introduce">
+	    		<p class="f15">About&nbsp;us<br><span>基地简介</span></p>
+	    		<div class="small_hr"></div>
+	    	</div>
+	    	<div class="box" id="rules">
+	    		<p class="f15">Rules<br><span>规章制度</span></p>
+	    		<div class="small_hr"></div>
+	    	</div>
+	    	<div class="box" id="environment">
+	    		<p class="f15">Lab&nbsp;Photos<br><span>学习环境</span></p>
+	    		<div class="small_hr"></div>
+	    	</div>
+	    	<div class="box" id="manage">
+	    		<p class="f15">Operation&nbsp;model<br><span>运行模式</span></p>
+	    		<div class="small_hr"></div>
+	    	</div>
+	    </div>
+	    
+	    <div class="body_right fl">
+	    	<div class="rt_header">
+	    	    <img src="{$Think.const.IMG_URL}/基地介绍img/icon_zhuanshi.png" alt="">
+	    	    <span>首页/基地介绍/<strong class="bread">基地简介</strong></span>
+	    	</div>
+	    	<div class="rt_hr"></div>
+	    	<div class="rt_main">
+	    	  <div class="introduce">
+	    		<!--  <div class="f30 rt_title">我们主要研究什么？</div>
+	    		<p class="rt_font">
+	    			计算机工程系现有“计算机科学与技术”、“网络工程”和“软件工程”三个本科专业，其中“计算机科学与技术”专业2013年被评为山西省高等学校特色专业建设点，成为新一轮的山西省特色专业建设点；计算机工程实验教学中心被评为“十二五山西省高等学校实验教学示范中心。2013年计算机工程系在凝练多年办学特色的基础上，申报了“数字媒体”专业，为手机游戏的开发提供了新的支撑平台。
+	    		</p>
+                <img src="{$Think.const.IMG_URL}/基地介绍img/基地简介_01.png" alt="" width="100%" class="photo01">
+                <p class="rt_font">
+	    			2013年6月成立了计算机工程研究所，确定了虚拟现实和数据库建模两个主要研究方向，成立了结构合理的科研梯队，为全校教师的科研工作提供了基础和保障。
+	    		</p>
+                <img src="{$Think.const.IMG_URL}/基地介绍img/基地简介_02.png" alt="" class="photo02">
+                <p class="rt_font">
+	    			计算机工程系现有专职教师43名，其中高级职称以上9人，讲师17人，博士和硕士学历占到86%。全系共获得省级以上教学成果4项，其中二等奖3项，一等奖一项。1人获得山西省"师德标兵"称号，1人在山西省高等院校中青年教师教学基本功竞赛中取得二等奖并记山西省社会主义劳动竞赛一等功一次。1人在2010年第十届全国多媒体课件大赛----高教工科组获三等奖。
+	    		</p>  -->
+	    		
+	    		 {$mes[0]['exp_introduce']}
+              </div>
+	    	</div>
+	    	<div class="rt_main">
+	    	 
+	    	  <div class="rules">
+	    	 {$mes[0]['exp_regulation']}
+	    		<!-- <div class="f30 rt_title">我们需要遵守什么？</div>
+
+                <p class="rt_rule">
+                	 一、 遵守学院及计算机系的各项规章制度。<br> 二、 按时到岗，尽职尽责，不得私自串岗、离职、缺岗。<br> 三、 负责实验室卫生清扫。<br>  四、 工作认真，主动帮助学院解决各种问题。<br>                 
+                     五、 保证设备的正常运行状态。如有问题应及时维修中心联系，不得擅自子拆卸机器和移动设备。 <br>     六、 实验室不准浏览暴力和色情网页、不允许上传反动言论，如有发现应及时制止并通知有关人员。<br>  
+                     七、  保证正常的上级程序，看管好实验室的所有物品，如发生设备设施的丢失或损坏，应按原价赔偿。 <br>八、 上级结束后，核对好物品后方可离开。<br> 九、 上级期间，不准私自带他人进入实验室。<br> 十、 工作期间，应该积极配合教师完成其他工作。
+                </p>
+                
+                <img src="{$Think.const.IMG_URL}/基地介绍img/huanjing03.jpg" alt="" class="rule-photo"> -->  
+              </div> 
+	    	</div>
+	    	<div class="rt_main">
+	    	  <div class="environment">
+	    	  	<ul class="clearfix photo_ul">
+	    	  		<li class="item1">
+	    	  		    <img src="{$Think.const.IMG_URL}/基地介绍img/environment_images/02工业学院工程系学习环境a_01.png" alt="">
+	    	  		    <div class="map_photo"></div>
+	    	  		    <span>校门</span>    	  		    
+	    	  		   	<img class="arrow" src="{$Think.const.IMG_URL}/基地介绍img/arrow.png" alt="">
+	    	  		</li>
+	    	  		<li class="item2">
+	    	  		    <img src="{$Think.const.IMG_URL}/基地介绍img/environment_images/02工业学院工程系学习环境a_02.png" alt="">
+	    	  		    <div class="map_photo"></div> 
+	    	  		    <span>行政大楼</span>    	  		    
+	    	  		   	<img class="arrow" src="{$Think.const.IMG_URL}/基地介绍img/arrow.png" alt="">
+	    	  		</li>
+	    	  		<li class="item3">
+	    	  		    <img src="{$Think.const.IMG_URL}/基地介绍img/environment_images/02工业学院工程系学习环境a_03.png" alt="">
+	    	  		    <div class="map_photo"></div> 
+	    	  		    <span>日新广场</span>    	  		    
+	    	  		   	<img class="arrow" src="{$Think.const.IMG_URL}/基地介绍img/arrow.png" alt="">
+	    	  		</li>
+	    	  		<li class="item4">
+	    	  		    <img src="{$Think.const.IMG_URL}/基地介绍img/environment_images/02工业学院工程系学习环境a_04.png" alt="">
+	    	  		    <div class="map_photo"></div> 
+	    	  		    <span>书香园</span>    	  		    
+	    	  		   	<img class="arrow" src="{$Think.const.IMG_URL}/基地介绍img/arrow.png" alt="">
+	    	  		</li>
+	    	  		<li class="item5">
+	    	  		    <img src="{$Think.const.IMG_URL}/基地介绍img/environment_images/02工业学院工程系学习环境a_05.png" alt="">
+	    	  		    <div class="map_photo"></div>
+	    	  		    <span>书香园</span>  
+	    	  		   	<img class="arrow" src="{$Think.const.IMG_URL}/基地介绍img/arrow.png" alt="">
+	    	  		</li>
+	    	  		<li class="item6">
+	    	  		    <img src="{$Think.const.IMG_URL}/基地介绍img/environment_images/02工业学院工程系学习环境a_06.png" alt="">
+	    	  		    <div class="map_photo"></div> 
+	    	  		    <span>文馨园</span>   	  		    
+	    	  		   	<img class="arrow" src="{$Think.const.IMG_URL}/基地介绍img/arrow.png" alt="">
+	    	  		</li>
+	    	  		<li class="item7">
+	    	  		    <img src="{$Think.const.IMG_URL}/基地介绍img/environment_images/02工业学院工程系学习环境a_07.png" alt="">
+	    	  		    <div class="map_photo"></div>  
+	    	  		    <span>文馨园喷泉</span>   	  		    
+	    	  		   	<img class="arrow" src="{$Think.const.IMG_URL}/基地介绍img/arrow.png" alt="">
+	    	  		</li>
+	    	  		<li class="item8">
+	    	  		    <img src="{$Think.const.IMG_URL}/基地介绍img/environment_images/02工业学院工程系学习环境a_08.png" alt="">
+	    	  		    <div class="map_photo"></div>
+	    	  		    <span>腾飞</span>    	  		    
+	    	  		   	<img class="arrow" src="{$Think.const.IMG_URL}/基地介绍img/arrow.png" alt="">
+	    	  		</li>
+	    	  		<li class="item9">
+	    	  		    <img src="{$Think.const.IMG_URL}/基地介绍img/environment_images/02工业学院工程系学习环境a_09.png" alt="">
+	    	  		    <div class="map_photo"></div> 
+	    	  		    <span>逸夫图书馆</span>    	  		    
+	    	  		   	<img class="arrow" src="{$Think.const.IMG_URL}/基地介绍img/arrow.png" alt="">
+	    	  		</li>
+	    	  	</ul>
+	    	  </div>
+	    	  <!-- <div class="environment_two">
+	    	  	<ul class="clearfix photo_ul">
+	    	  	    <li class="item7">
+	    	  		    <img src="{$Think.const.IMG_URL}/基地介绍img/environment_images/02工业学院工程系学习环境a_07.png" alt="">
+	    	  		    <div class="map_photo"></div>  
+	    	  		    <span>文馨园喷泉</span>   	  		    
+	    	  		   	<img class="arrow" src="images/基地介绍img/arrow.png" alt="">
+	    	  		</li>
+	    	  		<li class="item8">
+	    	  		    <img src="images/基地介绍img/environment_images/02工业学院工程系学习环境a_08.png" alt="">
+	    	  		    <div class="map_photo"></div>
+	    	  		    <span>腾飞</span>    	  		    
+	    	  		   	<img class="arrow" src="images/基地介绍img/arrow.png" alt="">
+	    	  		</li>
+	    	  		<li class="item9">
+	    	  		    <img src="images/基地介绍img/environment_images/02工业学院工程系学习环境a_09.png" alt="">
+	    	  		    <div class="map_photo"></div> 
+	    	  		    <span>逸夫图书馆</span>    	  		    
+	    	  		   	<img class="arrow" src="images/基地介绍img/arrow.png" alt="">
+	    	  		</li>
+	    	  		<li class="item2">
+	    	  		    <img src="images/基地介绍img/environment_images/02工业学院工程系学习环境a_02.png" alt="">
+	    	  		    <div class="map_photo"></div> 
+	    	  		    <span>行政大楼</span>    	  		    
+	    	  		   	<img class="arrow" src="images/基地介绍img/arrow.png" alt="">
+	    	  		</li>
+	    	  		<li class="item1">
+	    	  		    <img src="images/基地介绍img/environment_images/02工业学院工程系学习环境a_01.png" alt="">
+	    	  		    <div class="map_photo"></div>
+	    	  		    <span>校门</span>    	  		    
+	    	  		   	<img class="arrow" src="images/基地介绍img/arrow.png" alt="">
+	    	  		</li>
+	    	  		<li class="item3">
+	    	  		    <img src="images/基地介绍img/environment_images/02工业学院工程系学习环境a_03.png" alt="">
+	    	  		    <div class="map_photo"></div> 
+	    	  		    <span>日新广场</span>    	  		    
+	    	  		   	<img class="arrow" src="images/基地介绍img/arrow.png" alt="">
+	    	  		</li>
+	    	  		<li class="item4">
+	    	  		    <img src="images/基地介绍img/environment_images/02工业学院工程系学习环境a_04.png" alt="">
+	    	  		    <div class="map_photo"></div> 
+	    	  		    <span>书香园</span>    	  		    
+	    	  		   	<img class="arrow" src="images/基地介绍img/arrow.png" alt="">
+	    	  		</li>
+	    	  		<li class="item5">
+	    	  		    <img src="images/基地介绍img/environment_images/02工业学院工程系学习环境a_05.png" alt="">
+	    	  		    <div class="map_photo"></div>
+	    	  		    <span>书香园</span>  
+	    	  		   	<img class="arrow" src="images/基地介绍img/arrow.png" alt="">
+	    	  		</li>
+	    	  		<li class="item6">
+	    	  		    <img src="images/基地介绍img/environment_images/02工业学院工程系学习环境a_06.png" alt="">
+	    	  		    <div class="map_photo"></div> 
+	    	  		    <span>文馨园</span>   	  		    
+	    	  		   	<img class="arrow" src="images/基地介绍img/arrow.png" alt="">
+	    	  		</li>
+	    	  		
+	    	  	</ul>
+	    	  </div> -->
+	    	  <ul class="pager_ul clearfix">
+	    	  		<li class="pagers1">|&lt;&lt;</li>
+	    	  		<li class="pagers2">&lt;</li>
+	    	  		<li class="pagers3">1</li>
+	    	  		<li class="pagers4">2</li>
+	    	  		<li class="pagers5">&gt;</li>
+	    	  		<li class="pagers6">&gt;&gt;|</li>
+	    	  </ul>
+	      </div>
+          <div class="rt_main">
+	    	  <div class="manage">
+	    	  
+	    	 {$mes[0]['exp_manage']}
+	    		 <!--  <div class="f30 rt_title">创新实验室管理模式</div>
+                <p class="rt_rule">第一条 总 则为加强计算机实验室的管理，充分发挥计算机实验室的辅助教学作用，延长计算机实验室设备使用寿命，确保教学秩序的正常进行，特制定本制度。<br>第二条 体 制计算机实验室的使用与管理实行统筹规划、统一标准、统一管理、分层负责。</p>
+                <img src="{$Think.const.IMG_URL}/基地介绍img/基地简介_02.png" alt="" class="photo02">
+                <p class="rt_rule">
+                	第三条 职 责
+					计算机实验室日常使用与管理，由各计算机实验室管理员具体负责，主要职责包括：<br>
+					1、负责计算机实验室内所有计算机和其它设备的使用、维护、保养、维修工作；<br>
+					2、认真保管好计算机实验室内设备，认真填写使用记录；<br>
+					3、负责维护网络安全和信息安全工作，定期做好防病毒软件的升级、查毒工作；<br>
+					4、负责保存计算机实验室使用的有关记录并接受上一级部门的监督和检查；<br>
+					5、与其它处（室）密切配合，做好计算机培训工作；<br>
+					6、负责计算机实验室的防盗、防火、安全问题及卫生问题；<br>
+					7、负责安装和卸载各种应用软件；<br>
+					8、及时、准确做好计算机实验室数据备份，以便出现问题时及时恢复；<br>
+					9、维持上机秩序，负责课前准备，以保证正常的教学活动；<br>
+					
+                </p>-->
+              </div>
+             
+	    	</div>
+	    </div>
+	    <div class="clear"></div>
+	  </div>
+	</div>
+  <div></div>
+	<!--footer end-->
+	<include file="Public:bottom" />
+</body>
+</html>

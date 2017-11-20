@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h3>修改设备信息</h3>
+<form action="/expment/admin.php/Home/Equipment/modifyequiphandle" method="post" >
+<table width="70%" border="1" cellpadding="5" cellspacing="0" bgcolor="#cccccc">
+<input type="hidden" name="equip_id" value="{$mes[0]['equip_id']}"/>
+	<tr>
+		<td align="right">设备编号</td>
+		<td><input type="text"  name="equip_no"  value="{$mes[0]['equip_no']}"/></td>
+	</tr>
+	<tr>
+		<td align="right">设备名称</td>
+		<td><input type="text" name="equip_name" value="{$mes[0][equip_name]}" /></td>
+	</tr>
+	<tr>
+		<td align="right">设备描述</td>
+		<td>
+			<textarea name="equip_describe" rows="5" cols="40" >{$mes[0]['equip_describe']}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td align="right">设备数量</td>
+		<td>
+			<textarea name="equip_num" rows="5" cols="40" >{$mes[0]['equip_num']}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2"><input type="submit"  value="确认修改" style="margin-left:80%"/></td>
+	</tr>
+
+</table>
+</form>
+</body>
+</html>

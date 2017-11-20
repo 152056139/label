@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h3>添加项目</h3>
+<form action="/expment/admin.php/Home/Pro/modifynodoingprohandle" method="post" enctype="multipart/form-data">
+<table width="70%" border="1" cellpadding="5" cellspacing="0" bgcolor="#cccccc">
+<input type="hidden" name="pro_id" value="{$mes[0][pro_id]}"/>
+	<tr>
+		<td align="right">项目名称</td>
+		<td><input type="text"  name="pro_name" value="{$mes[0]['pro_name']}"/></td>
+	</tr>
+	<tr>
+		<td align="right">项目开始时间</td>
+		<td><input type="date" name="start_time" value="{$mes[0]['start_time']}"/></td>
+	</tr>
+	<tr>
+		<td align="right">项目结束时间</td>
+		<td><input type="date" rows="5" name="end_time" cols="60" value="{$mes[0]['end_time']}"/></td>
+	</tr>
+	<tr>
+		<td align="right">项目负责人</td>
+		<td><input type="text"  name="manage" value="{$mes[0]['manage']}"/></td>
+	</tr>
+	<tr>
+		<td align="right">指导老师</td>
+		<td><input type="text" name="teacher_id" value="{$mes[0]['teacher_id']}"/></td>
+	</tr>
+	<tr>
+		<td align="right">项目来源</td>
+		<td><input type="text" name="pro_sources" value="{$mes[0]['pro_sources']}"/></td>
+	</tr>
+	<tr>
+		<td align="right">项目介绍</td>
+		<td>
+		<textarea name="pro_introduce" required="required"  >{$mes[0]['pro_introduce']}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td align="right">项目成员</td>
+		<td>
+			<textarea name="mem_id">{$mes[0]['mem_id']}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td align="right">项目类型</td>
+		<td>
+			<select name="pro_type" value="{$mes[0]['pro_type']}">
+			<if condition="$mes[0]['pro_type'] eq 0"> 
+					<option  selected="selected" value='0'>即将开始的项目</option>
+					<option value='1'>正在进行的项目</option>
+					<option value='2'>已经完成的项目</option>
+					
+			<elseif condition="$mes[0]['pro_type'] eq 1"/>
+					<option   value='0'>即将开始的项目</option>
+					<option  selected="selected" value='1'>正在进行的项目</option>
+					<option value='2'>已经完成的项目</option>
+					
+			<elseif condition="$mes[0]['pro_type'] eq 2"/>
+			<option   value='0'>即将开始的项目</option>
+					<option   value='1'>正在进行的项目</option>
+					<option  selected="selected" value='2'>已经完成的项目</option>
+					
+			
+			
+					</if>
+			
+			</select>
+		
+		</td>
+	</tr>
+	<tr>
+		<td align="right">项目照片</td>
+		<td><input type="file"  name="image"/></td>
+	</tr>
+	<tr>
+		<td colspan="2"><input type="submit"  value="确认修改" style="margin-left:80%"/></td>
+	</tr>
+
+</table>
+</form>
+</body>
+</html>

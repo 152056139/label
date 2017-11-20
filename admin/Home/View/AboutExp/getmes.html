@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <meta charset="UTF-8" /> 
+  <title></title> 
+  <link rel="stylesheet" href="{$Think.const.CSS_URL}/about_exp.css" /> 
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
+ </head>
+ <body>
+  <load href="__PUBLIC__/Ueditor/utf8-php/ueditor.config.js" /> 
+  <load href="__PUBLIC__/Ueditor/utf8-php/ueditor.all.min.js" /> 
+  <script src="__PUBLIC__/Ueditor/utf8-php/ueditor.parse.js"></script>   
+  <!-- 配置文件 --> 
+  <script type="text/javascript" src="__PUBLIC__/Ueditor/utf8-php/ueditor.config.js"></script> 
+  <!-- 编辑器源码文件 --> 
+  <script type="text/javascript" src="__PUBLIC__/Ueditor/utf8-php/ueditor.all.js"></script> 
+  <!-- 实例化编辑器 --> 
+  <div class="div_1"> 
+   <p style=""><font size="5" face="arial" color="black">实验室信息修改</font></p> 
+   <form name="MyForm" id="MyForm" action="/expment/admin.php/Home/AboutExp/modifymes" enctype="multipart/form-data" method="post"> 
+    <input name="about_id" value="{$mes[0]['about_id']}" type="hidden" />
+    <table class="table" cellspacing="2px" cellpadding="2px"> 
+     <input name="about_id" value="{$mes[0]['about_id']}" type="hidden" /> 
+     <tbody> 
+      <tr> 
+       <td>标题</td> 
+       <td>内容</td> 
+       <td>请选择照片</td> 
+      </tr> 
+      <tr> 
+       <td>实验室介绍</td> 
+       <td>  
+        <!-- 加载编辑器的容器 --> 
+        <script id="editor_1" name="exp_introduce" type="text/plain" style="width:100%;height:200px;">
+		  </script>  
+		</td> 
+       <td><input type="file" name="exp_image_1" /></td> 
+      </tr> 
+      <tr> 
+       <td>实验室规章制度</td> 
+       <td> <script id="editor_2" name="exp_regulation" type="text/plain" style="width:100%;height:200px;;">
+        
+    </script> </td> 
+       <td><input type="file" name="exp_image_2" /></td> 
+      </tr> 
+      <tr> 
+       <td>实验室学习环境</td> 
+       <td> 
+        <!-- <textarea name="exp_stu_enviroment" rows="10" cols="80"> {$mes[0]['exp_stu_environment']}</textarea> --> </td> 
+       <td><input type="file" name="exp_image_3" /></td> 
+      </tr> 
+      <tr> 
+       <td>实验室管理模式</td> 
+       <td> <script id="editor_3" name="exp_manage" type="text/plain" style="width:100%;height:200px;;">
+        
+    </script> </td> 
+       <td><input type="file" name="exp_image_4" /></td> 
+      </tr> 
+      <tr> 
+       <td colspan="3"><input style="font:30px; height:50px; width:100px;margin-left:80%;" type="submit" value="确认修改" /></td> 
+      </tr> 
+     </tbody> 
+    </table>  
+   </form>
+  </div>  
+ 
+
+  <script type="text/javascript" src=" http://apps.bdimg.com/libs/jquery/1.8.0/jquery.min.js"></script>
+  <script type="text/javascript">
+
+    //UEDITOR_HOME_URL、config、all这三个顺序不能改变(绝对路径)
+    //window.UEDITOR_HOME_URL = "/ThinkPHP/Public/Ueditor/";    
+    
+    //实例化编辑器
+    var config = {
+    toolbars: [
+        ['fullscreen', 'source', 'undo', 'redo', 'bold']
+    ],
+    autoHeightEnabled: true,
+    autoFloatEnabled: true
+	};
+    var ue_1 = UE.getEditor('editor_1');
+    var ue_2 = UE.getEditor('editor_2');
+    var ue_3 = UE.getEditor('editor_3');
+
+function HtmlDecode(str) {
+var t = document.createElement("div");
+t.innerHTML = str;
+return t.textContent || t.innerText; 
+alert(str);
+}
+    ue_1.ready(function() {
+		
+		 $.ajax({
+             type		: "GET",
+			 url		:'/expment/admin.php/Home/AboutExp/getInfo',
+              
+              dataType	: "json",
+              success	:  function(response){
+								console.log(response);
+								
+								ue_1.setContent(HtmlDecode(response.exp_introduce));
+								ue_2.setContent(HtmlDecode(response.exp_regulation));
+								ue_3.setContent(HtmlDecode(response.exp_stu_environment));
+				
+             }
+            }
+          )
+    
+	});
+   
+
+    //提交方法
+    function submitEditor()    {
+        //此处以非空为例
+        if(ue.hasContents()){
+            ue.sync();       //同步内容
+			
+            document.MyForm.submit();
+        }
+    }    
+    
+   
+
+</script> 
+ </body>
+</html>

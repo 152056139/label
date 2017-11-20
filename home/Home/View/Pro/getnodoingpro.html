@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="{$Think.const.CSS_URL}/base.css"/>
+		<link rel="stylesheet" href="{$Think.const.CSS_URL}/css2.css" />
+		<link rel="stylesheet" href="{$Think.const.CSS_URL}/fenye.css" />
+		
+		<script src="{$Think.const.JS_URL}/jquery-1.8.0.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<include file="Public:header" />	
+		 <div class="img"><img src="{$Think.const.IMG_URL}/基地项目img/基地项目.jpg" alt="" width="100%"></div>
+		<div class="jieshao" id="aaa">
+			<div class="left">
+				<ul>
+					<li >
+						<div class="text" style="background-color:#0094E1;">
+							<p class="fff f14">To Do</p>
+							<p class="fff f14">即将进行的项目</p>
+							<p class="line"></p>
+						</div>
+						<div class="mengban">
+							<p class="fff f14">To Do</p>
+							<p class="fff f14">即将进行的项目</p>
+							<p class="line1"></p>
+						</div>
+					</li>
+					<li >
+					<a href="__APP__/Home/Pro/getundoingpro#aaa">
+						<div class="text" >
+							<p class=" f14">Doing </p>
+							<p class="f14">正在进行的项目</p>
+							<p class="line"></p>
+						</div>
+						<div class="mengban">
+							<p class="fff f14">Doing </p>
+							<p class="fff f14">正在进行的项目</p>
+							<p class="line1"></p>
+						</div>
+					</a>
+					</li>
+					<li >
+					<a href="__APP__/Home/Pro/gethavedonepro#aaa">
+						<div class="text" >
+							<p class="f14">Done </p>
+							<p class="f14">已经完成的项目</p>
+							<p class="line"></p>
+						</div>
+						<div class="mengban">
+							<p class="fff f14">Done </p>
+							<p class="fff f14">已经完成的项目</p>
+							<p class="line1"></p>
+						</div>
+						</a>
+					</li>
+					
+					<div class="clear"></div>
+				</ul>
+			</div>
+			<div class="right">
+				<div class="xinxi">
+					<div class="zuanshi"><img src="{$Think.const.IMG_URL}/icon_zhuanshi.png"/></div>
+					<div class="xinxia"><span class="f17">基地项目/即将开始的项目</span></div>
+				</div>
+				<div class="photo">
+					<div class="lunbo">
+						<ul>
+						<foreach name="mes" item="mes" key="k">
+							    <li class="tu2">
+							    	<div class="img"><img src="{$Think.const.IMG}{$mes['image']}"/></div>
+							    	<div class="mengban2">
+							        	<div class="bod1"><p class="c0094e1  f20 tc">[Undoing]{$mes['pro_name']}</p></div>
+							        	<div class="bod2"><p class="f14 tc yanse"></div>
+							        	<div class="body f14 yanse ">负责人:{$mes['manage']}  &nbsp;&nbsp;&nbsp; 指导老师:{$mes['teacher_id']}</div>
+							        	<div class="bod3"><p></p></div>
+							        	<a href="__APP__/Home/Pro/getdetailtodo?pro_id={$mes['pro_id']}"><div class="bod5">查看详细</div></a>
+							        </div>
+							         <div class="riqi2">
+							         	<div class="shang4 tc">
+							         		<div><span class=" 0094e1  f20 tc">[Undoing]{$mes['pro_name']}</span></div>
+							         		<div class="mar2"><span class="f13 tc yanse"></span></div>
+							         	</div>
+							         </div>
+							     </li>
+						   </foreach>
+						         <div class="clear"></div>
+						</ul>
+						
+					</div>
+			</div>
+		<div class="pages"> {$page}</div>
+		
+		</div>
+	</div>
+	
+	<include file="Public:bottom" />
+	<!--结尾end-->
+	</body>
+	<script type="text/javascript">
+			i=0;
+			$('.jieshao .right .fanye ul li').click(function(){
+				$('.jieshao .right .photo .lunbo').stop();
+				i = $(this).index();
+				$('.jieshao .right .photo .lunbo').animate({'left':-i*960},500);
+				$('.banner ul.number li').eq(i)
+				
+			});
+		
+	</script>
+</html>

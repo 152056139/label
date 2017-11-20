@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="{$Think.const.CSS_URL}/base.css"/>
+		<link rel="stylesheet" type="text/css" href="{$Think.const.CSS_URL}/css_chengyuan.css"/>
+		
+	</head>
+	<body>
+		<include file="Public:header" />
+		<div class="img"><img src="{$Think.const.IMG_URL}/成员风采img/成员风采.jpg" alt="" width="100%"></div>
+		<div class="jieshao">
+			<div class="left">
+				<ul>
+					<li >
+						<div class="text" style="background-color:#0094E1; hrigh:85px;">
+							<p class="fff f15">Member</p>
+							<p class="fff f15">
+								<if condition="$mes[0]['member_type_id'] eq 0"> 
+											新成员
+											<elseif condition="$mes[0]['member_type_id'] eq 1"/>
+											实习组成员	
+											<elseif condition="$mes[0]['member_type_id'] eq 2"/>
+											测试组成员
+											<elseif condition="$mes[0]['member_type_id'] eq 3"/>
+											研发组成员
+											<elseif condition="$mes[0]['member_type_id'] eq 4"/>
+											项目经理
+											<elseif condition="$mes[0]['member_type_id'] eq 5"/>
+											总负责人
+											<elseif condition="$mes[0]['member_type_id'] eq 6"/>
+											指导老师
+											<elseif condition="$mes[0]['member_type_id'] eq 7"/>
+											已毕业成员
+											
+								</if>
+							
+							</p>
+							<p class="line"></p>
+						</div>
+						<div class="mengban" >
+							<p class="fff f15">Member</p>
+							<p class="fff f15">
+								<if condition="$mes[0]['member_type_id'] eq 0"> 
+											新成员
+											<elseif condition="$mes[0]['member_type_id'] eq 1"/>
+											实习组成员	
+											<elseif condition="$mes[0]['member_type_id'] eq 2"/>
+											测试组成员
+											<elseif condition="$mes[0]['member_type_id'] eq 3"/>
+											研发组成员
+											<elseif condition="$mes[0]['member_type_id'] eq 4"/>
+											项目经理
+											<elseif condition="$mes[0]['member_type_id'] eq 5"/>
+											总负责人
+											<elseif condition="$mes[0]['member_type_id'] eq 6"/>
+											指导老师
+											<elseif condition="$mes[0]['member_type_id'] eq 7"/>
+											已毕业成员
+											
+											</if>
+							</p>
+							<p class="line1"></p>
+						</div>
+					</li>
+					
+					<div class="clear"></div>
+				</ul>
+			</div>
+			<div class="right">
+				<div class="xinxi">
+					<div class="zuanshi"><img src="{$Think.const.IMG_URL}/icon_zhuanshi.png"/></div>
+					<div class="xinxia"><span class="f17">首页/成员风采/<if condition="$mes[0]['member_type_id'] eq 0"> 
+											新成员
+											<elseif condition="$mes[0]['member_type_id'] eq 1"/>
+											实习组成员	
+											<elseif condition="$mes[0]['member_type_id'] eq 2"/>
+											测试组成员
+											<elseif condition="$mes[0]['member_type_id'] eq 3"/>
+											研发组成员
+											<elseif condition="$mes[0]['member_type_id'] eq 4"/>
+											项目经理
+											<elseif condition="$mes[0]['member_type_id'] eq 5"/>
+											总负责人
+											<elseif condition="$mes[0]['member_type_id'] eq 6"/>
+											指导老师
+											<elseif condition="$mes[0]['member_type_id'] eq 7"/>
+											已毕业成员
+											
+											</if>
+					
+					
+					</span></div>
+				</div>
+				<div class="bod1">
+					<div class="bod1q">
+						<img src="{$Think.const.IMG}{$mes[0]['image']}"">
+						<!--<p class=" f18">&nbsp;&nbsp;&nbsp;个人简介：111{$mes[0]['detail_info']}</p>-->
+					</div>
+					<div class="bod1w"> 
+						<p class="c0094e1 f20">姓名：{$mes[0]['mem_name']}</p>
+						<ul>
+							<li><span class="f16">学号&nbsp;:&nbsp;</span><span class="yanse f16">{$mes[0]['student_no']}</span></li>
+							<li><span class="f16">性别&nbsp;:&nbsp;</span><span class="yanse f16">
+							<if condition="$mes[0]['sex'] eq 0"> 
+											男
+											<elseif condition="$mes[0]['sex'] eq 1"/>
+											女	
+							</if>
+							
+							</span></li>
+							<li><span class="f16">学习方向&nbsp;:&nbsp;</span><span class="yanse f16">
+								<if condition="$mes[0]['study_direction_id'] eq 0"> 
+											PHP
+											<elseif condition="$mes[0]['study_direction_id'] eq 1"/>
+											IOS
+											<elseif condition="$mes[0]['study_direction_id'] eq 2"/>
+											Android
+											<elseif condition="$mes[0]['study_direction_id'] eq 3"/>
+											前端
+											<elseif condition="$mes[0]['study_direction_id'] eq 4"/>
+											Java
+											<elseif condition="$mes[0]['study_direction_id'] eq 5"/>
+											美工
+											<elseif condition="$mes[0]['study_direction_id'] eq 6"/>
+											虚拟现实
+											<elseif condition="$mes[0]['study_direction_id'] eq 7"/>
+											.NET
+											<elseif condition="$mes[0]['study_direction_id'] eq 8"/>
+											C/C++
+											<elseif condition="$mes[0]['study_direction_id'] eq 9"/>
+											其他
+											</if>
+							</span></li>
+							<li><span class="f16">成员所属类型&nbsp;:&nbsp;</span><span class="yanse f16">
+							
+							<if condition="$mes[0]['member_type_id'] eq 0"> 
+											新成员
+											<elseif condition="$mes[0]['member_type_id'] eq 1"/>
+											实习组成员	
+											<elseif condition="$mes[0]['member_type_id'] eq 2"/>
+											测试组成员
+											<elseif condition="$mes[0]['member_type_id'] eq 3"/>
+											研发组成员
+											<elseif condition="$mes[0]['member_type_id'] eq 4"/>
+											项目经理
+											<elseif condition="$mes[0]['member_type_id'] eq 5"/>
+											总负责人
+											<elseif condition="$mes[0]['member_type_id'] eq 6"/>
+											指导老师
+											<elseif condition="$mes[0]['member_type_id'] eq 7"/>
+											已毕业成员
+											
+											</if>
+							</span></li>
+							<li><span class="f16">已经学习过的方向&nbsp;:&nbsp;</span><span class="yanse f16">{$mes[0]['have_study_direction']}</span></li>
+							
+						</ul>
+					</div>
+					
+					</div>
+					<div class=""></div>
+			</div>
+			<!--加入我们start-->
+		</div>
+	<include file="Public:bottom" />
+	</body>
+</html>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<link rel="stylesheet" href="{$Think.const.CSS_URL}/backstage.css">
+</head>
+
+<body>
+
+<div class="details">
+                    <div class="details_operation clearfix">
+                        <div class="bui_select">
+                            <input type="button" value="添&nbsp;&nbsp;加" class="add"  onclick="addEquipment()">
+                        </div>
+                            
+                    </div>
+                    <!--表格-->
+                    <table class="table" cellspacing="0" cellpadding="0">
+                        <thead>
+                            <tr>
+                            	<th >编号</th>
+                                <th >设备编号</th>
+                                <th >设备名称</th>
+                                <th >设备描述</th>
+                                <th >设备总数</th>
+                                <th >操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <foreach name='mes' item='vo' key='k'>
+                            <tr>
+                                <!--这里的id和for里面的c1 需要循环出来-->
+                                <td>{$k+1}</td>
+                                <td>{$vo[equip_no]}</td>
+                                <td>{$vo[equip_name]}</td>
+                                <td>{$vo[equip_describe]}</td>
+                                <td>{$vo[equip_num]}</td>
+                                
+                                <td align="center"><input type="button" value="修改" class="btn" onclick="editEquipment({$vo['equip_id']})"><input type="button" value="删除" class="btn"  onclick="delEquipment({$vo['equip_id']})"></td>
+                            </tr>
+                        </foreach>
+                          
+                        </tbody>
+                    </table>
+                </div>
+                 <div class="pages">
+                        {$page}
+                </div>
+</body>
+<script type="text/javascript">
+
+	function addEquipment(){
+		window.location="{$Think.const.ROOT_URL}/admin.php/Home/Equipment/addequip";	
+	}
+	function editEquipment(id){
+			window.location="{$Think.const.ROOT_URL}/admin.php/Home/Equipment/modifyequip?equip_id="+id;
+	}
+	function delEquipment(id){
+			if(window.confirm("您确定要删除吗？删除之后不可以恢复哦！！！")){
+				window.location="{$Think.const.ROOT_URL}/admin.php/Home/Equipment/delequip?equip_id="+id;
+			} 
+	}
+</script>
+</html>

@@ -1,0 +1,106 @@
+*{
+	font-family: "微软雅黑";
+}
+body{
+	overflow-x: hidden;
+	margin: 0 auto;
+}
+a{text-decoration: none;}
+.h720{height: 720px;}
+.h18{height: 18px;}
+.f34{font-size: 34px;}
+.c0094e1{color: #0094e1;}
+.cccc{color: #ccc;}
+.caaa{color: #aaa;}
+.c999{color: #999;}
+.c848484{color: #848484;}
+.cf0f0f0{color: #f0f0f0;}
+.cc5e1ef{color:#c5e1ef}
+.f24{font-size: 24px;}
+.mt44{margin-top: 44px;}
+.width1200{
+	width:1200px;
+	margin:0 auto;
+}
+.width93{
+	width: 93px;
+}
+
+/*viewmore*/
+.viewmore{width: 152px;height: 40px;margin:55px auto 0px;cursor: pointer;}
+
+
+/*����ͷ*/
+.tell_us{
+	width: 170px;
+	position: relative;
+	left:206px;
+	top:-7px;
+	color: #42a5e5;
+	
+}
+.tell_us a{
+	text-decoration: none;
+	color: #42a5e5;
+}
+/*ͷ��*/
+/*����*/
+.nav{
+	/*position: relative;
+	border: 1px solid #ccc;*/
+	height: 54px;
+	
+}
+.nav ul{
+	position: relative;
+	top: 31px;
+	right:0px;
+}
+.nav ul a{
+	text-decoration: none;
+	color: #4a4a4a;
+}
+.nav ul .hover{
+	display: none;
+}
+.nav .li1:hover .normal{
+	display: none;
+}
+.nav .li1:hover .hover{
+	display: block;
+}
+.nav .li1:hover .hover a{
+	color: #42A5E5;
+}
+
+.neirong{height:1070px;background-color:#F2F2F2;margin-top:0px;position:relative;}
+.neirong .left{width:300px;height:500px;background-color:#F2F2F2;margin-left:50px;margin-top:70px;float:left;}
+.neirong .left .button{width:250px;height:100px;border:1px;background-color:#0094E1;margin:0 auto;}
+.neirong .left .button p{margin-top:10px; color:#333333;margin-left:15px;font-color:15px;}
+.neirong .left  a:hover .button{background-color:#0094E1}
+
+.neirong .right img{float:left;}
+.neirong .right{width:900px;height:1000px;background-color:#F2F2F2;float:left;margin-left:80px;margin-top:70px;}
+.neirong .right ul {margin-top:50px;margin-left:50px;}
+.neirong .right ul li {margin-top:10px;}
+.neirong .right ul li input[type="text"]{width:300px;height: 50px;padding-left: 20px;font-size: 15px;}
+.neirong .right ul li input[type="file"]{width:400px;height:30px;}
+.neirong .right ul textarea{width: 490px;height: 110px;padding: 15px;box-sizing: border-box;resize:none;margin-right:30px;font-size: 15px;border: 0;}
+.neirong .right ul .last{margin-top:10px;font-size: 15px;}
+.neirong .right ul .last .last-top{width:230px;height:45px;}
+.neirong .right ul .last .last-top select{width: 100%;height: 100%;padding-left:20px ;box-sizing: border-box;color: #a9a9a9;border: 0;}
+.neirong .right ul .last .last-btn{width: 230px;height: 45px;background-color: #0094E1;line-height: 45px;color: #fff;margin-top: 20px;cursor: pointer;}
+
+
+/*footer*/
+.footer{width:1920px;height: 413px;position: absolute;left:50%;margin-left:-960px;}
+/*结尾开始*/
+.jiewei{width: 1200px;height:300px;margin:0 auto;}
+.jiewei .erweizi{width:200px;height:37px;margin: 0 auto;}
+.jiewei .zuihou{width: 850px;margin: 25px auto;}
+.jiewei .nav{width: 850px;margin:0 auto;}
+
+.jiewei  ul li .hover{display: none;}
+.jiewei  ul li:hover .normal{display:none;}
+.jiewei  ul li:hover .hover{display: block;}
+/*结尾结束*/

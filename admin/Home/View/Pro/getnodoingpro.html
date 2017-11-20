@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<link rel="stylesheet" href="{$Think.const.CSS_URL}/backstage.css">
+</head>
+
+<body>
+<div class="details">
+                    <div class="details_operation clearfix">
+                        <div class="bui_select">
+                            <input type="button" value="添&nbsp;&nbsp;加" class="add"  onclick="addPro()">
+                        </div>
+                            
+                    </div>
+                    <!--表格-->
+                    <table class="table" cellspacing="0" cellpadding="0">
+                        <thead>
+                            <tr>
+                                <th >编号</th>
+                                <th >项目名称</th>
+                                <th >项目开始时间</th>
+                                <th >项目结束时间</th>
+                                <th >项目负责人</th>
+                                <th >项目类型</th>
+                                <th >指导老师</th>
+                                <th >项目来源</th>
+                                <th >项目介绍</th>
+                                <th >项目成员</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <foreach name='mes' item='vo' key='k'>
+                            <tr>
+                                <!--这里的id和for里面的c1 需要循环出来-->
+                                <td>{$k+1}</td>
+                                <td>{$vo[pro_name]}</td>
+                                <td>{$vo[start_time]}</td>
+                                <td>{$vo[end_time]}</td>
+                                <td>{$vo[manage]}</td>
+                                <td>
+                                 <if condition="$vo[pro_type] eq 0"> 
+									即将开始的项目
+									<elseif condition="$vo[pro_type] eq 1"/>
+									正在进行的项目
+									<elseif condition="$vo[pro_type] eq 2"/>
+									已经完成的项目
+									</if>	
+                                </td>
+                                <td>{$vo[teacher_id]}</td>
+                                <td>{$vo[pro_sources]}</td>
+                                <td>{$vo[pro_introduce]|substr=0,20}</td>
+                                <td>{$vo[mem_id]}</td>
+                                <td align="center"><input type="button" value="修改" class="btn" onclick="editPro({$vo['pro_id']})"><input type="button" value="删除" class="btn"  onclick="delPro({$vo['pro_id']})"></td>
+                            </tr>
+                        </foreach>
+                          
+                        </tbody>
+                    </table>
+                </div>
+                 <div class="pages">
+                        {$page}
+                </div>
+</body>
+<script type="text/javascript">
+
+	function addPro(){
+		window.location="{$Think.const.ROOT_URL}/admin.php/Home/Pro/addpro";	
+	}
+	function editPro(id){
+			window.location="{$Think.const.ROOT_URL}/admin.php/Home/Pro/modifynodoingpro?pro_id="+id;
+	}
+	function delPro(id){
+			if(window.confirm("您确定要删除吗？删除之后不可以恢复哦！！！")){
+				window.location="{$Think.const.ROOT_URL}/admin.php/Home/Pro/delpro?pro_id="+id;
+			} 
+	}
+</script>
+</html>

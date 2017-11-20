@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>新闻动态</title>
+	<link rel="stylesheet" type="text/css" href="{$Think.const.CSS_URL}/新闻动态.css">
+	<link rel="stylesheet" type="text/css" href="{$Think.const.CSS_URL}/base.css">
+	<link rel="stylesheet" href="{$Think.const.CSS_URL}/fenye.css" />
+	
+	<script src="{$Think.const.JS_URL}/jquery-1.8.0.min.js" type="text/javascript" charset="utf-8"></script>
+
+	<script type="text/javascript">
+	  $(function(){
+
+	  	$("#info").attr("style","color:#fff;background:#0094e1;");
+	  	$("#info").children(".small_hr").attr("style","background:#fff;");
+	  	$(".info").show().parent().siblings(".rt_main").hide();
+
+	  	$(".box").hover(function(){
+          $(this).attr("style","color:#fff;background:#0094e1;").siblings().attr("style","color:#000;background:#f0f0f0;");
+          $(this).children(".small_hr").attr("style","background:#fff;").parent().siblings().children(".small_hr").attr("style","background:#666");
+       
+          var text=$(this).find("span").text();
+          $(".rt_header").find("strong").text(text);
+
+          var id=$(this).attr("id");
+          $(".rt_main").each(function(){
+              if($.trim($(this).children().attr("class"))==$.trim(id))
+                {
+                   $(this).show().siblings(".rt_main").hide();
+                }             
+          });  
+       	});
+	  });
+	</script>
+</head>
+<body>
+	<include file="Public:header" />
+    <!-- 图片 -->
+    <div class="img"><img src="{$Think.const.IMG_URL}/基地项目img/新闻动态.jpg" alt="" width="100%"></div>
+    <div class="width1000 body">
+	    <div class="body_left fl">
+	    	<div class="box" id="info">
+	    		<p class="f15">Information&nbsp;Board<br><span>信息公告</span>
+	    		<div class="small_hr"></div>
+	    	</div>
+	    	<!--<div class="box" id="dynamic">
+	    		<p class="f15">Base&nbsp;dynamic<br><span>基地动态</span></p>
+	    		<div class="small_hr"></div>
+	    	</div>-->
+	    </div>
+        <div class="body_right fl">
+	    	<div class="rt_header">
+	    	    <img src="{$Think.const.IMG_URL}/新闻动态img/icon_zhuanshi.png" alt="">
+	    	    <span>首页/新闻动态/<strong class="bread">信息公告</strong></span>
+	    	</div>
+	    	<div class="rt_hr"></div>
+	    	<div class="rt_main">
+	    	    <div class="info">
+		    		<!--新闻start-->									
+					<ul class="new-content">
+						<foreach name="mes" item="mes">
+							<li>
+								<div class="cal tc fl">
+									<div class="cal-big f39">{$mes['time']|substr=9,10}</div>
+									<div class="cal-small f12">{$mes['time']|substr=0,7}</div>
+								</div>
+								<div class="info fl">
+									<div class="title f18">{$mes['title']}</div>
+									<div class="detail f12">{$mes['text']|substr=0,180}...</div>
+								
+								</div>
+								<div class="clear"></div>
+								<div class="img">
+									<a href="__APP__/Home/Notice/getdetail?notice_id={$mes['notice_id']}"><img src="{$Think.const.IMG_URL}/首页img/btn_liaojie.png" alt="" /></a>
+								</div>
+							</li>
+						</foreach>
+						
+						<div class="clear"></div>
+						
+						
+					</ul>
+					<div class='pages'>{$page}</div>
+                </div>	
+	    	</div>
+	    	<div class="rt_main">
+	    	    <div class="dynamic">
+		    		<ul class="new-content">					
+						<li>
+							<div class="cal tc fl">
+								<div class="cal-big f39">06</div>
+								<div class="cal-small f12">2016.10</div>
+							</div>
+							<div class="info fl">
+								<div class="title f18">APP开发/维护</div>
+								<div class="detail f12">专业杭州网络公司,十年专注品质活力网站建设,提供杭州网站建设、杭州网站制作、杭州网页设计、下沙网站建设、下沙网站制作、下沙网站设计等.</div>
+							
+							</div>
+							<div class="clear"></div>
+							<div class="img">
+								<img src="{$Think.const.IMG_URL}/新闻动态img/btn_liaojie.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<div class="cal tc fl">
+								<div class="cal-big f39">09</div>
+								<div class="cal-small f12">2016.10</div>
+							</div>
+							<div class="info fl">
+								<div class="title f18">网站开发/维护</div>
+								<div class="detail f12">专业杭州网络公司,十年专注品质活力网站建设,提供杭州网站建设、杭州网站制作、杭州网页设计、下沙网站建设、下沙网站制作、下沙网站设计等.</div>
+							
+							</div>
+							<div class="clear"></div>
+							<div class="img">
+								<img src="{$Think.const.IMG_URL}/新闻动态img/btn_liaojie.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<div class="cal tc fl">
+								<div class="cal-big f39">04</div>
+								<div class="cal-small f12">2016.10</div>
+							</div>
+							<div class="info fl">
+								<div class="title f18">微信开发/维护</div>
+								<div class="detail f12">专业杭州网络公司,十年专注品质活力网站建设,提供杭州网站建设、杭州网站制作、杭州网页设计、下沙网站建设、下沙网站制作、下沙网站设计等.</div>
+							
+							</div>
+							<div class="clear"></div>
+							<div class="img">
+								<img src="{$Think.const.IMG_URL}/新闻动态img/btn_liaojie.png" alt="" />
+							</div>
+						</li>
+						<li>
+							<div class="cal tc fl">
+								<div class="cal-big f39">30</div>
+								<div class="cal-small f12">2016.10</div>
+							</div>
+							<div class="info fl">
+								<div class="title f18">高校网络开发/维护</div>
+								<div class="detail f12">专业杭州网络公司,十年专注品质活力网站建设,提供杭州网站建设、杭州网站制作、杭州网页设计、下沙网站建设、下沙网站制作、下沙网站设计等.</div>
+							
+							</div>
+							<div class="clear"></div>
+							<div class="img">
+							    <img src="images/新闻动态img/btn_liaojie.png" alt="" />
+						    </div>
+						</li>
+						<div class="clear"></div>
+					</ul>
+                </div>	
+	    	</div>
+	      </div>
+	   </div>
+	   <div class="clear"></div>
+	</div>	
+   
+	<include file="Public:bottom" />
+</body>
+</html>

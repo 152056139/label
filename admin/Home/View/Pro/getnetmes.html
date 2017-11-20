@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<link rel="stylesheet" href="{$Think.const.CSS_URL}/backstage.css">
+</head>
+
+<body>
+
+<div class="details">
+                    <div class="details_operation clearfix">
+                       <div class="bui_select">
+                            <input type="button" value="添&nbsp;&nbsp;加" class="add"  onclick="addMember()">
+                        </div>  
+                    </div>
+                    <!--表格-->
+                    <table class="table" cellspacing="0" cellpadding="0">
+                        <thead>
+                            <tr>
+                            	<th >编号</th>
+                                <th >资源名称</th>
+                                <th >资源方向</th>
+                                <th >上传人</th>
+                                <th >是否通过审核</th>
+                                <th >资源文件</th>
+                                <th>操作</th>                            </tr>
+                        </thead>
+                        <tbody>
+                        <foreach name='mes' item='vo' key='k'>
+                            <tr>
+                                <!--这里的id和for里面的c1 需要循环出来-->
+                                <td>{$k+1}</td>
+                                <td>{$vo[res_name]}</td>
+                                <td>
+	                                 <if condition="$vo['study_direction_id'] eq 0"> 
+									PHP	
+									<elseif condition="$vo['study_direction_id'] eq 1"/>
+									IOS	
+									<elseif condition="$vo['study_direction_id'] eq 2"/>
+									Android
+									<elseif condition="$vo['study_direction_id'] eq 3"/>
+									前端
+									<elseif condition="$vo['study_direction_id'] eq 4"/>
+									美工
+									<elseif condition="$vo['study_direction_id'] eq 5"/>
+									美工
+									<elseif condition="$vo['study_direction_id'] eq 6"/>
+									虚拟现实
+									
+									</if>
+			
+                                 
+                                 </td>
+                                <td>{$vo[upload_user]}</td>
+                                 <td> {$vo[is_approve]}</td>
+                                <td><a href="/expment{$vo[resource]}">查看</a></td>
+                                <td align="center"><input type="button" value="删除" class="btn"  onclick="delMember('{$vo['res_id']}','{$vo['resource']}')"></td>
+                            </tr>
+                        </foreach>
+                          
+                        </tbody>
+                    </table>
+                </div>
+                 <div class="pages">
+                        {$page}
+                </div>
+</body>
+<script type="text/javascript">
+	function addMember(){
+		window.location="{$Think.const.ROOT_URL}/admin.php/Home/Resource/addres";	
+	}
+	
+	function editMember(id){
+			window.location="{$Think.const.ROOT_URL}/admin.php/Home/Resource/modifymember?res_id="+id;
+	}
+	function delMember(id,resource){
+			if(window.confirm("您确定要删除吗？删除之后不可以恢复哦！！！")){
+				window.location="{$Think.const.ROOT_URL}/admin.php/Home/Resource/delmes?res_id="+id+"&resource="+resource;
+			} 
+	}
+</script>
+</html>

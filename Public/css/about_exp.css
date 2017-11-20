@@ -1,0 +1,9 @@
+@CHARSET "UTF-8";
+*{margin: 0;padding: 0;}
+.table{
+	
+	font-size: 14px;
+	cellspacing="1";
+	cellpadding="1";
+}
+.table td{background-color: #E8E8E8;}

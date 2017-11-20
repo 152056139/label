@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+	<link rel="stylesheet" href="{$Think.const.CSS_URL}/base.css" />
+	<link rel="stylesheet" type="text/css" href="{$Think.const.CSS_URL}/woyaojiaru.css"/>
+	
+	<script src="{$Think.const.JS_URL}/jquery-1.8.0.min.js" type="text/javascript" charset="utf-8"></script>
+	<style type="text/css">
+
+.file-box{ position:relative;width:340px}
+.txt{ height:22px; border:1px solid #cdcdcd; width:180px;}
+.btn{ background-color:#FFF; border:1px solid #CDCDCD;height:24px; width:70px;}
+.file{position:absolute;top:600px;left:480px; filter:alpha(opacity:0);opacity: 0;width:260px }
+</style>
+</head>
+<body>
+		<include file="Public:header" />
+		<!--幻灯片start-->
+		<div class="img"><img src="{$Think.const.IMG_URL}/成员风采img/成员风采.jpg" alt="" width="100%"></div>
+		<div class="neirong">
+			
+			<div class="left">
+				<a>
+					<div class="button">
+						<p class="">Join us</p>
+						<p class="">我要加入</p>
+						<p class="">————</p>
+					</div>
+				</a>
+			</div>
+			
+			<div class="right">
+			<img src="{$Think.const.IMG_URL}/icon_zhuanshi.png"/><p>&nbsp首页 / 我要加入  </p>
+				<form action="/expment/home.php/Home/Member/addteacherhandle" method="post" enctype="multipart/form-data">
+					<ul>
+									
+									<li>
+										<input type="text" placeholder="姓名 :" required="required" name="mem_name"/>
+									</li>
+									<li>
+										<input type="text" placeholder="性别 :" required="required" name="sex"/>
+									</li>
+									<li>
+										<input type="text" placeholder="学号 :" required="required" name="student_no"/>
+									</li>
+									<li>
+										<input type="text" placeholder="qq :" required="required" name="qq"/>
+									</li>
+									<li>
+										<input type="text" placeholder="手机号码 :" required="required" name="phone_num"/>
+									</li>
+									<li>
+									
+										<input style="width:300px;height:50px;padding-left: 20px;font-size: 15px;" type="email" placeholder="邮箱 :" required="required" name="e_mail"/>
+									</li>
+									<li>
+										<input type="text" placeholder="已经学习过的方向 :" required="required" name="have_study_direction"/>
+									</li>
+									<li>
+										
+											
+											
+											<input style="height:25px;" type='text' name='textfield' id='textfield' class='txt' placeholder="请上传照片"/>  
+ 											<input type='button' class='btn' value='浏览...' />
+ 											<input style="color:red;" type="file" name="fileField" class="file" id="fileField" size="28" onchange="document.getElementById('textfield').value=this.value" />
+										
+									</li>
+									<p>&nbsp</p>
+									<textarea name="" placeholder="个人简介:" required="required" name="detail_info"></textarea>
+									<div class="last">
+										<!--<div class="last-top">
+											<select name="">
+												<option value="" disabled selected>请选择学习方向</option>
+												<option value="">JAVA</option>
+												<option value="">UI</option>
+											</select>
+										</div>-->
+										<input type="submit" class="last-btn tc f20" values="提交申请" ></input>
+									</div>
+								</ul>
+				
+				</form>
+			
+			
+			</div>
+			
+			
+		</div>
+		
+		<!--footer start-->
+		<!--结尾start-->
+	<div class="jiewei ">
+	<p>&nbsp</p>
+		<div class="erwei tc"><img src="{$Think.const.IMG_URL}/erweima.png"/></div>
+		<div class="erweizi"><p class="f15 tc">扫一扫&nbsp;进入微网</p></div>
+		<div class="zuihou">
+		<ul class="nav ">
+						<li class="fl w50 tc">
+							<a href="__APP__/Home/Index/index">
+								<div class="normal">首页</div>
+								<div class="hover c0094e1">[首页]</div>
+							</a>
+						</li>
+						<li class="fl w100 tc">
+						    <a href="__APP__/Home/aboutExp/aboutexp">
+								<div class="normal">基地介绍</div>
+								<div class="hover c0094e1">[基地介绍]</div>
+							</a>
+					    </li>
+					    <li class="fl w100 tc">
+							<a href="__APP__/Home/Member/gettrainmember">
+								<div class="normal">成员风采</div>
+								<div class="hover c0094e1">[成员风采]</div>
+						</a>
+					    </li>
+					    <li class="fl w100 tc">
+							<a href="__APP__/Home/Pro/getnodoingpro">
+								<div class="normal">基地项目</div>
+								<div class="hover c0094e1">[基地项目]</div>
+							</a>
+					    </li>
+					    <li class="fl w100 tc">
+							<a href="__APP__/Home/Notice/getallmes">
+								<div class="normal">新闻动态</div>
+								<div class="hover c0094e1">[新闻动态]</div>
+							</a>
+					    </li>
+					    <li class="fl w100 tc">
+							<a href="__APP__/Home/Member/getstarmember">
+								<div class="normal">明星成员</div>
+								<div class="hover c0094e1">[明星成员]</div>
+							</a>
+					    </li>
+					    <li class="fl w100 tc">
+							<a href="__APP__/Home/Resource/getphpmes">
+								<div class="normal">学习资源</div>
+								<div class="hover c0094e1">[学习资源]</div>
+							</a>
+					    </li>
+					    <li class="fl w100 tc">
+							<a href="__APP__/Home/Member/getnewmember">
+								<div class="normal">我要加入</div>
+								<div class="hover c0094e1">[我要加入]</div>
+							</a>
+					    </li>
+					    <li class="fl w100 tc">
+							<a href="">
+								<div class="normal">学院首页</div>
+								<div class="hover c0094e1">[学院首页]</div>
+							</a>
+					    </li>
+					    <div class="clear tc"></div>
+					</ul>
+		</div>
+		<p class="tc f15 yanse">地址：山西省太原市尖草坪太原工业学院电子楼602&nbsp;&nbsp;&nbsp;电话:0351-414822/1448218&nbsp;山西省太原工业学院</p>
+		<p class="tc f15 yanse">Copyright@2016-2026&nbsp;SINA&nbsp;Corporation,All&nbsp;Rights&nbsp;Reserved</p>
+	</div>
+	<!--结尾end-->
+		<!--footer end-->
+</body>
+
+<script type="text/javascript">        
+
+function isValidMail() {            
+
+　　var TextVal = document.getElementById("email").value;            
+
+　　var Regex = /^(?:\w+\.?)*\w+@(?:\w+\.)*\w+$/;            
+
+　　if (Regex.test(TextVal)){                
+
+　　alert(true);            
+
+　　}            
+
+　　else {                
+
+　　if (TextVal == "") {                    
+
+　　　　alert("请输入电子邮件地址！！");                    
+
+　　return false;                
+
+　　}                
+
+　　else {                    
+
+　　alert("您好，你输入不正确，请重新输入；");                    
+
+     document.getElementById("TextBox1").value = "";                    
+
+　　return false;                
+
+　　　　}            
+
+　　}        
+
+}    
+
+</script>
+</html>

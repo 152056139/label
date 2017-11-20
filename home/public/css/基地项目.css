@@ -1,0 +1,149 @@
+*{
+	font-family: "微软雅黑";
+}
+body{
+	overflow-x: hidden;
+	margin: 0 auto;
+}
+a{text-decoration: none;}
+.h720{height: 720px;}
+.h18{height: 18px;}
+.f34{font-size: 34px;}
+.c0094e1{color: #0094e1;}
+.cccc{color: #ccc;}
+.caaa{color: #aaa;}
+.c999{color: #999;}
+.c848484{color: #848484;}
+.cf0f0f0{color: #f0f0f0;}
+.cc5e1ef{color:#c5e1ef}
+.f24{font-size: 24px;}
+.mt44{margin-top: 44px;}
+.width1200{
+	width:1200px;
+	margin:0 auto;
+}
+.width73{
+	width: 73px;
+}
+
+.width1000{width:1300px;margin:0 auto;}
+.tell_us{width: 170px;
+	    position: relative;
+	    left:222px;
+	    top:-7px;
+    }
+.tell_us a{color: #42a5e5;}
+
+/*导航*/
+.nav{
+	height: 54px;
+	margin-bottom: 20px;	
+}
+.nav ul{
+	position: relative;
+	top: 31px;
+	right:0px;
+}
+.nav ul a{
+	text-decoration: none;
+	color: #4a4a4a;
+}
+.nav ul .hover{
+	display: none;
+}
+
+.nav ul .li1:nth-child(4)  .hover{display:block;}
+.nav .li1:hover .normal{
+	display: none;
+}
+.nav .li1:hover .hover{
+	display: block;
+}
+.nav .li1:hover .hover a{
+	color: #42A5E5;
+}
+.nav ul .li1 .active{color: #42A5E5;}
+
+.img{margin-bottom: 60px;}
+
+.body_content{height:1100px;}
+.body_left{width:200px;margin-right: 60px;height:310px;}
+.body_left .box{width: 100%;height:70px;margin-bottom:10px;background: #f0f0f0;padding-top: 10px;padding-left: 20px;box-sizing: border-box;}
+.body_left .box:last-child{margin-bottom:0px;}
+.body_left .box .small_hr{width:50px;height:2px;background: #666;margin-top: 7px;}
+.body_right{width:736px;position: relative;}
+.body_right .rt_header img{margin-right: 10px;}
+.body_right .rt_header span{letter-spacing: 2px;position: absolute;top:-4px;}
+.body_right .rt_header .bread{color:#42A5E5;}
+.body_right .rt_hr{height:1px;width:100%;background: #f0f0f0;margin-top: 15px;margin-bottom: 50px;}
+
+.doing .doing-top img{width:336px;float:left;}
+.doing .doing-top .doing-wrap{float:right;width: 400px;height:189px;padding:50px 40px;background:#f9f9f9;box-sizing: border-box;}
+.doing .doing-top .doing-wrap .doing-title{color:#42A5E5;font-size: 18px;}
+.doing .doing-top .doing-wrap .hr{width:100%;height:1px;background: #e6e6e6;margin-top: 5px;margin-bottom: 15px;}
+.doing .doing-top .doing-wrap .doing-content .content{font-size: 13px;color: #666;margin-bottom: 10px;}
+.doing .doing-top .doing-wrap .doing-content .content .span1{margin-right: 34px;}
+.doing .doing-top .doing-wrap .doing-content .content .span2{margin-right: 60px;}
+.doing .doing-top .doing-wrap .doing-content .content:nth-child(2){margin-bottom: 5px;}
+
+
+.doing .doing-img img{width: 736px;margin-bottom: 30px;margin-top: 13px;}
+.doing .doing-members li{float: left;margin-right:38px;}
+.doing .doing-members li:last-child{margin-right: 0px;}
+.doing .doing-members li .mem-intro{font-size: 14px;text-align: center;color:#666;margin-top: 10px;}
+.doing .doing-p{font-size: 14px;color: #666;line-height: 25px;text-indent: 2em;margin-bottom: 30px;width:736px;}
+
+
+.biaodan{background-color: #f2f2f2;padding-top: 50px;padding-bottom: 55px;margin-top: 200px;}
+.biaodan .content{height: 340px;}
+.biaodan .content .left{width: 660px;height:340px;}
+.biaodan .content .left .title{width:160px;height: 45px;background: url('基地项目img/icon_shutiao.png') no-repeat 0 5px;padding-left: 20px;margin-bottom: 48px;line-height: 33px;}
+.biaodan .content .left .real-form{height: 242px;}
+.biaodan .content .left .real-form ul{width:750px}
+.biaodan .content .left .real-form li{width: 200px;height: 45px;background-color: #fff;float:left;margin-right:30px;margin-bottom: 20px;}
+.biaodan .content .left .real-form li input[type="text"]{width:100%;height: 100%;border: 0px;padding-left: 20px;
+box-sizing: border-box;font-size: 15px;}
+.biaodan .content .left .real-form textarea{width: 430px;height: 110px;padding: 15px;box-sizing: border-box;resize:none;float:left;margin-right:30px;font-size: 15px;border: 0;}
+.biaodan .content .left .real-form .last{float: left;font-size: 15px;}
+.biaodan .content .left .real-form .last .last-top{width:230px;height:45px;}
+.biaodan .content .left .real-form .last .last-top select{width: 200px;height: 100%;padding-left:20px ;box-sizing: border-box;color: #a9a9a9;border: 0;}
+.biaodan .content .left .real-form .last .last-btn{width: 200px;height: 45px;background-color: #0094E1;line-height: 45px;color: #fff;margin-top: 20px;cursor: pointer;}
+.biaodan .content .right .title{height: 45px;background: url('基地项目img/icon_shutiao.png') no-repeat 0 5px;padding-left: 20px;margin-bottom: 48px;}
+.biaodan .content .right{width:290px;height:340px;}
+.biaodan .content .right .touch-us{line-height: 29px;}
+.biaodan .content .right .touch-us .touch-us-content{padding-left: 20px;box-sizing: border-box;}
+.biaodan .content .right .touch-us .touch-us-content.content1{background: url("基地项目img/icon_dizhi.png") no-repeat 0 8px;}
+.biaodan .content .right .touch-us .touch-us-content.content2{background: url("基地项目img/icon_tel.png") no-repeat 0 8px;}
+
+
+
+/*footer
+.footer{height: 413px; text-align: center;}
+.footer img{margin-top: 60px;}
+.footer .hr{width:100%;height:1px;background:#ccc;margin-top: 25px;margin-bottom: 25px}
+.footer ul{width: 100%;}
+.footer ul li{float: left;width: 108px;text-align: center;border-right: 1px dotted #ccc;}
+.footer ul li:last-child{border-right: none;}
+.footer ul li a:hover{color: #42A5E5;}
+.footer .footer-info{font-size: 13px;line-height: 28px;
+*/
+
+/*结尾开始
+.jiewei{width: 1200px;height:300px;margin:0 auto;}
+.jiewei .erweizi{width:200px;height:37px;margin: 0 auto;}
+.jiewei .zuihou{width: 850px;margin: 25px auto;}
+.jiewei .nav{width: 850px;margin:0 auto;}
+
+.jiewei  ul li .hover{display: none;}
+.jiewei  ul li:hover .normal{display:none;}
+.jiewei  ul li:hover .hover{display: block;}
+结尾结束*/
+/*结尾开始*/
+.jiewei{width: 1200px;height:300px;margin:0 auto;}
+.jiewei .erweizi{width:200px;height:37px;margin: 0 auto;}
+.jiewei .zuihou{width: 850px;margin: 25px auto;}
+.jiewei .nav{width: 850px;}
+.jiewei  ul li .hover{display: none;}
+.jiewei  ul li:hover .normal{display:none;}
+.jiewei  ul li:hover .hover{display: block;}
+/*结尾结束*/
